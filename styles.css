@@ -10,8 +10,16 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-#projects {
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+section#projects {
     margin: 20px;
+}
+ul {
+    list-style-type: none;
 }
 footer {
     background-color: #333;
@@ -21,4 +29,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    bottom: 0;
 }
