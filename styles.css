@@ -4,26 +4,31 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 header {
-    background-color: #333;
+    background-color: #4c0e7b;
     color: white;
     padding: 10px 0;
     text-align: center;
 }
+
 nav a {
     margin: 0 15px;
     color: white;
     text-decoration: none;
 }
+
 section#projects {
     margin: 20px;
 }
+
 ul {
     list-style-type: none;
 }
+
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #eae0ac;
+    color: rgb(248, 9, 9);
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -78,8 +83,8 @@ footer {
     background-color: #218838;
 }
 
-/* Hide buttons by default */
+/* Hide buttons by default (if needed) */
 #scrollToTopBtn, #scrollToBottomBtn {
-    display: none;
+    display: none; /* Uncomment if you want them hidden by default */
 }
 

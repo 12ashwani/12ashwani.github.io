@@ -5,40 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashwani Kumar's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .center-content {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #6d9295;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(17, 15, 15, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #2694a2;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast.</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Excel.html">Excel Projects</a>
+            <a href="tableau.html">Tableau Projects</a>
+            <a href="ml.html">Machine Learning Projects</a>
+            <a href="nlp.html">NLP Projects</a>
+        </nav>
     </header>
 
-    <section id="about me">
-        <h2>About Me</h2>
-        <p>
-            I am a Data Science professional with a strong foundation in Electronics and Communication Engineering, complemented by hands-on experience in quality control and business development. My journey into data science has been driven by a passion for leveraging data to solve complex problems. I have honed my skills in Python, SQL, and machine learning, with practical experience in developing and deploying data-driven models, particularly in fraud detection. I am proficient in various tools and platforms, including TensorFlow, scikit-learn, and Streamlit, and I have successfully created a professional portfolio website that showcases my expertise in machine learning, business intelligence, and natural language processing. My diverse background enables me to approach data science challenges with a unique perspective, combining technical proficiency with a strong understanding of business and quality standards.
-        </p>
+    <section id="about-me">
+        <!-- <div class="center-content"> -->
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast with a robust background in Electronics and Communication Engineering.
+                My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience in quality 
+                control, business development,</p>
+            </p>I am committed to leveraging my skills in Python, SQL, and machine learning to solve complex challenges. 
+                My work spans across developing data-driven models, particularly in fraud detection, and creating interactive visualizations and intelligent systems.
+                I bring a unique perspective to data science, blending technical expertise with a deep understanding of business needs and quality standards.
+            </p>
+        </div>
     </section>
-
-    <section id="information">
-        <ul>
-            <li>Tableau Projects</li>
-            <li>Machine Learning Projects</li>
-            <li><a href="nlp.html">NLP Projects</a></li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="tableau.html">Tableau Projects</a></li>
-            <li><a href="ml.html">Machine Learning Projects</a></li>
-            <li><a href="nlp.html">NLP Projects</a></li>
-        </ul>
-    </section>
-
     <footer>
-        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        <!-- <div class="center-content"> -->
+            <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
+            <p>Know more about me:</p>
+            <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
