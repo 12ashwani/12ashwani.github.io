@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #95b1ce;
+            color: #141010;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fb0808;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 {
+            color: #0073e6;
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        ul li {
+            background-color: #d2e1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #0e11bc;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #c6ddf4;
+            color: #ea0f0f;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,36 +64,40 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="Excel.html">Excel Projects</a>
-
             <a href="tableau.html">Tableau Projects</a>
             <a href="ml.html">Machine Learning Projects</a>
             <a href="nlp.html">NLP Projects</a>
         </nav>
     </header>
+    
     <section id="projects">
-        <h2>My NLP Projects</h2>
-        <p>
-            Dive into my NLP projects, where I've applied advanced natural language processing techniques to solve real-world problems. From sentiment analysis to text classification, each project demonstrates my ability to preprocess and analyze text data, build and fine-tune NLP models, and deploy solutions using tools such as NLTK, spaCy, and Transformers. These projects not only showcase my expertise in NLP but also highlight my commitment to leveraging language data for actionable insights and innovative applications.
+        <h2>Natural Language Processing (NLP)</h2>
+        <p style="text-align:center; max-width:800px; margin: 0 auto;">
+            Explore my NLP projects where I've applied advanced natural language processing techniques to solve real-world problems. From sentiment analysis to text classification, these projects highlight my ability to preprocess and analyze text data, build and fine-tune NLP models, and deploy solutions using tools such as NLTK, spaCy, and Transformers.
         </p>
         <ul>
             <li>
-                <a href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank">1 Sentiment Analysis of Social Media Posts</a>
+                <a href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank">Sentiment Analysis of Social Media Posts</a><br>
+                Analyzed sentiment of social media posts using NLP techniques to understand public opinion on various topics.
             </li>
             <li>
-                <a href="https://github.com/12ashwani/Text-Classification" target="_blank">2 Text Classification for Customer Support</a>
+                <a href="https://github.com/12ashwani/Text-Classification" target="_blank">Text Classification for Customer Support</a><br>
+                Built a text classification model to categorize customer support queries, improving response efficiency.
             </li>
             <li>
-                <a href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank">3 Named Entity Recognition for Financial Data</a>
+                <a href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank">Named Entity Recognition for Financial Data</a><br>
+                Implemented Named Entity Recognition to extract important entities from financial documents, aiding in data analysis.
             </li>
             <li>
-                <a href="https://github.com/12ashwani/Chatbot" target="_blank">4 Chatbot for Customer Service</a>
+                <a href="https://github.com/12ashwani/Chatbot" target="_blank">Chatbot for Customer Service</a><br>
+                Developed a chatbot to automate customer service interactions, enhancing customer experience and reducing response times.
             </li>
         </ul>
     </section>
     
     <footer>
         <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        <p>Explore more projects on <a href="https://github.com/kumarashwani1208" target="_blank">GitHub</a></p>
     </footer>
 
     <!-- Scroll to Top Button -->
@@ -49,7 +105,5 @@
 
     <!-- Scroll to Bottom Button -->
     <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
-
-    <script src="scripts.js"></script>
 </body>
 </html>

@@ -4,27 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashwani Kumar's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        .center-content {
-            text-align: center;
-            margin: 20px auto;
-            max-width: 800px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #6d9295;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(17, 15, 15, 0.1);
+        }
+        header {
+            background-color: #95b1ce;
+            color: #141010;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fb0808;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            color: #0073e6;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         ul li {
-            margin: 10px 0;
+            background-color: #d2e1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #c6ddf4;
+            color: #ea0f0f;
+            margin-top: 20px;
+        }
+        .center-content {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #e1e3ba;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(102, 71, 71, 0.1);
         }
         ul li a {
             text-decoration: none;
-            color: #2694a2;
+            color: #0e11bc;
             font-weight: bold;
         }
         ul li a:hover {
@@ -45,22 +84,66 @@
         </nav>
     </header>
 
-    <section id="about-me">
-        <!-- <div class="center-content"> -->
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast with a robust background in Electronics and Communication Engineering.
-                My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience in quality 
-                control, business development,</p>
-            </p>I am committed to leveraging my skills in Python, SQL, and machine learning to solve complex challenges. 
-                My work spans across developing data-driven models, particularly in fraud detection, and creating interactive visualizations and intelligent systems.
-                I bring a unique perspective to data science, blending technical expertise with a deep understanding of business needs and quality standards.
-            </p>
-        </div>
-    </section>
+    <div class="container">
+        <section id="about-me">
+            <div class="center-content">
+                <h2>About Me</h2>
+                <p>Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast with a robust background in Electronics and Communication Engineering.
+                   My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience in quality 
+                   control and business development, I am committed to leveraging my skills in Python, SQL, and machine learning to solve complex challenges.</p>
+                <p>My work spans across developing data-driven models, particularly in fraud detection, and creating interactive visualizations and intelligent systems.
+                   I bring a unique perspective to data science, blending technical expertise with a deep understanding of business needs and quality standards.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p><strong>AKTU, Lucknow, India</strong> (July 2014 - July 2018)</p>
+            <p>B.Tech in Electronics and Communication Engineering (ECE)</p>
+            <p>Percentage: 70%</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <h3>UNO Minda Haridwar | Quality Inspector</h3>
+            <p>Haridwar, India | June 2020 – December 2022</p>
+            <ul>
+                <li>Monitored and enforced quality control standards and processes within the production facility.</li>
+                <li>Performed regular inspections of raw materials, components, and finished products.</li>
+                <li>Conducted comprehensive testing procedures on products.</li>
+                <li>Performed Root Cause Analysis, maintained documentation, and conducted audits.</li>
+            </ul>
+
+            <h3>Digital Notebook | Business Development</h3>
+            <p>Noida, India | June 2023 – November 2023</p>
+            <ul>
+                <li>Provided information about company services and suggested the best solutions for business owners.</li>
+                <li>Handled inbound and outbound calls, and maintained data in Excel or Google Sheets.</li>
+                <li>Followed up with previous clients and maintained client recovery efforts.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, SQL</li>
+                <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Seaborn, Matplotlib, Sklearn, TensorFlow</li>
+                <li><strong>Tools/Platforms:</strong> Git, VS Code, Anaconda, Google Colab, ChatGPT</li>
+                <li><strong>Databases:</strong> MySQL, MongoDB</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <p><strong>Credit Card Fraud Detection</strong></p>
+            <p><em>Tools: Streamlit, Sklearn</em></p>
+            <p>This project focuses on developing a machine learning model to detect fraudulent credit card transactions, aiming to identify potential frauds in real-time and reduce the impact of fraudulent activities.</p>
+        </section>
+    </div>
+
     <footer>
-        <!-- <div class="center-content"> -->
-            <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
+        <div class="center-content">
+            <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | +919058179268</p>
             <p>Know more about me:</p>
             <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
         </div>

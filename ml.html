@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #95b1ce;
+            color: #141010;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fb0808;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 {
+            color: #0073e6;
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        ul li {
+            background-color: #d2e1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #0e11bc;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #c6ddf4;
+            color: #ea0f0f;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,53 +71,32 @@
     </header>
     
     <section id="projects">
-        <section id="about-me">
-            <h2>Machine Learning</h2>
-            <p>
-                Dive into my machine learning projects, where I've applied advanced data science techniques to 
-                solve real-world challenges across various domains. From assessing loan repayment capabilities in 
-                the banking sector to categorizing products for e-commerce platforms and detecting fraudulent credit card transactions, 
-                each project demonstrates my ability to preprocess data, select and fine-tune models, and deploy solutions using 
-                cutting-edge tools like TensorFlow, scikit-learn, and Streamlit. These projects not only showcase my technical skills but also
-                highlight my commitment to creating practical, data-driven solutions that address complex business needs.
-            </p>
-        </section>
-        <h2>My Machine Learning Projects</h2>
+        <h2>Machine Learning</h2>
+        <p style="text-align:center; max-width:800px; margin: 0 auto;">
+            Dive into my machine learning projects, where I've applied advanced data science techniques to 
+            solve real-world challenges across various domains. From assessing loan repayment capabilities in 
+            the banking sector to categorizing products for e-commerce platforms and detecting fraudulent credit card transactions, 
+            each project demonstrates my ability to preprocess data, select and fine-tune models, and deploy solutions using 
+            cutting-edge tools like TensorFlow, Scikit-learn, and Streamlit.
+        </p>
         <ul>
             <li>
-                <!-- <h3>Loan Repayment Assessment in Banking</h3> -->
-                <!-- <p>Developed a model to predict loan repayment capabilities in the banking sector using various machine learning algorithms.</p> -->
-                <a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank">1 Loan Repayment Assessment in Banking</a>
+                <a href="https://github.com/12ashwani/Creditcard_fraud_detection">Credit Card Fraud Detection</a><br>
+                Developed a machine learning model using Streamlit and Scikit-learn to detect fraudulent credit card transactions, aiming to reduce financial fraud by accurately identifying suspicious activities.
             </li>
             <li>
-                <!-- <h3>E-commerce Product Categorization</h3> -->
-                <!-- <p>Implemented a classification model to categorize products for an e-commerce platform using machine learning techniques.</p> -->
-                <a href="https://github.com/12ashwani/E-comerc-product_category" target="_blank">2 E-commerce Product Categorization</a>
+                <a href="https://github.com/12ashwani/E-comerc-product_category">E-commerce Product Categorization</a><br>
+                Utilized advanced machine learning algorithms to accurately categorize products in an e-commerce environment, improving search relevance and user experience on e-commerce platforms.
             </li>
             <li>
-                <!-- <h3>Credit Card Fraud Detection</h3> -->
-                <!-- <p>Created a fraud detection system to identify suspicious credit card transactions using advanced machine learning methods.</p> -->
-                <a href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank">3 Credit Card Fraud Detection</a>
-            </li>
-            <li>
-                <!-- <h3>Student Performance Prediction</h3> -->
-                <!-- <p>Developed a model to predict student performance based on various features using machine learning techniques.</p> -->
-                <a href="https://github.com/12ashwani/student_ml" target="_blank">4 Student Performance Prediction</a>
+                <a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking">Loan Default Prediction</a><br>
+                Designed a predictive model to evaluate the risk of loan default, assisting financial institutions in making informed lending decisions and managing risk.
             </li>
         </ul>
     </section>
-    
+
     <footer>
-        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        <p>Explore more projects on <a href="https://github.com/kumarashwani1208">GitHub</a></p>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" title="Go to top">Top</button>
-
-    <!-- Scroll to Bottom Button -->
-    <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
