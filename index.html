@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashwani Kumar's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         .container {
-            width: 100%;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         header {
-            background-color: #95b1ce;
-            color: #141010;
+            background-color: #0073e6;
+            color: #fff;
             padding: 20px 0;
             text-align: center;
+            border-radius: 8px 8px 0 0;
         }
         nav a {
             margin: 0 15px;
-            color: #fb0808;
+            color: #fbfbfb;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
         }
         section {
             margin: 20px 0;
         }
         h2 {
             color: #0073e6;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
         }
         ul {
             list-style-type: none;
@@ -41,21 +53,25 @@
         }
         ul li {
             background-color: #d2e1f1;
-            margin: 5px 0;
-            padding: 10px;
+            margin: 10px 0;
+            padding: 15px;
             border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        ul li:hover {
+            transform: scale(1.02);
         }
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             background-color: #c6ddf4;
-            color: #ea0f0f;
+            color: #333;
             margin-top: 20px;
+            border-radius: 0 0 8px 8px;
         }
         .center-content {
             text-align: center;
             margin: 20px auto;
-            max-width: 800px;
             padding: 20px;
             background-color: #e1e3ba;
             border-radius: 8px;
@@ -66,8 +82,21 @@
             color: #0e11bc;
             font-weight: bold;
         }
-        ul li a:hover {
-            text-decoration: underline;
+        ul li:hover {
+    background-color: #6a9fb2; /* Change this to your desired background color */
+    transform: scale(1.02);
+              }
+
+        
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -89,13 +118,11 @@
             <div class="center-content">
                 <h2>About Me</h2>
                 <p>I am a self-motivated and result-oriented Machine Learning Engineer and Data Analyst with a robust background in Electronics and Communication Engineering.
-                     My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience across various domains, including fraud detection, quality control, and business development, I specialize in developing, deploying, and optimizing machine learning models..</p>
+                    My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience across various domains, including fraud detection, quality control, and business development, I specialize in developing, deploying, and optimizing machine learning models.</p>
                 <p>My expertise in Python, SQL, and leading machine learning libraries enables me to uncover actionable insights and build predictive models that drive business impact. I bring a unique perspective to data science by blending technical proficiency with a deep understanding of business needs and quality standards. 
                     Whether it's creating interactive visualizations, developing intelligent systems, or solving complex challenges, I am committed to delivering data-driven solutions that align with organizational goals.</p>
             </div>
         </section>
-
-       
 
         <section>
             <h2>Education</h2>
@@ -109,25 +136,31 @@
             <ul>
                 <li>Data Analysis: SQL, MS Excel, Statistics</li>
                 <li>Data Visualization: Tableau, Power BI</li>
-                <li>Databases: Mysql, MongoDB</li>
+                <li>Databases: MySQL, MongoDB</li>
                 <li>Programming: Python</li>
-                <li>Python Libraries and Frameworks: NumPy,Pandas,Matplotlib,Seaborn,Sklearn,TensorFlow</li>
-                <li>Tools: Git,Github,ChatGPT,Google Colab,Vs Code,Anaconda</li>
+                <li>Python Libraries and Frameworks: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow</li>
+                <li>Tools: Git, GitHub, ChatGPT, Google Colab, VS Code, Anaconda</li>
                 <li>Machine Learning (ML)</li>
                 <li>Data Engineering</li>
                 <li>Natural Language Processing (NLP)</li>
-                <li>Deep learning</li>
-
+                <li>Deep Learning</li>
             </ul>
         </section>
 
         <section>
             <h2>Experience</h2>
             <h3>Operation Executive</h3>
-            <p>Tridev Business Solution, Noida | Mar 2024 - Present</p>
+            <p>Ewour Waste Management · Full-time, Noida | Mar 2024 - Present</p>
             <ul>
-                <li>Manage customer interactions and assist with government certificate applications (FSSAI, import licenses, etc.).</li>
-                <li>Organize and maintain files for various certifications, ensuring accuracy and compliance.</li>
+                <li><strong>Licensing and Permit Applications:</strong> Prepare, submit, and manage applications for licenses such as Import-Export Code, FSSAI, Steel NOC, Waste Management, Battery EPR, Plastic EPR, Electronics EPR, and CDSCO
+                    Track application progress and address queries or requests from regulatory authorities.</li>
+                <li><strong>Regulatory Compliance:</strong> Stay updated on regulations, laws, and guidelines from regulatory bodies like FSSAI, DGFT (Directorate General of Foreign Trade), 
+                    Central Pollution Control Board (CPCB), CDSCO, and EPR-specific mandates</li>
+                <li><strong>Documentation and Record-Keeping:</strong> Maintain organized and accurate records of all documentation related to applications, approvals, permits, EPR compliance reports, and communication with authorities</li>
+                <li><strong>EPR (Extended Producer Responsibility) Compliance:</strong> Oversee compliance for EPR requirements specific to Batteries, Plastics, and Electronics, ensuring alignment with the CPCB guidelines
+                    Submit required EPR documentation, reports, and product-specific data to authorities in adherence with government regulations</li>
+                
+
             </ul>
 
             <h3>Business Development</h3>
@@ -172,19 +205,11 @@
             <p><strong>Hackathon Winner (1st Rank - eCommerce Product Categorization)</strong></p>
             <p>Secured the top position in the eCommerce Product Categorization hackathon by developing a high-performing text classification model. Demonstrated exceptional problem-solving skills, innovative feature engineering, and advanced model fine-tuning, resulting in significant improvements in categorization accuracy. Delivered comprehensive visualizations that provided key insights into data patterns and category distributions.</p>
         </section>
-
-        <section>
-            <h2>Certifications</h2>
-            <p>Data Science Certification (Issuing Organization)</p>
-        </section>
     </div>
 
     <footer>
-        <div class="center-content">
-            <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | +919058179268</p>
-            <p>Know more about me:</p>
-            <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
-        </div>
+        <p>Contact me at: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a></p>
+        <p>&copy; 2024 Ashwani Kumar. All rights reserved.</p>
     </footer>
 </body>
 </html>

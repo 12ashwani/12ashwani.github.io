@@ -11,18 +11,24 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         header {
             background-color: #95b1ce;
             color: #141010;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for header */
         }
         nav a {
             margin: 0 15px;
             color: #fb0808;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+        nav a:hover {
+            color: #0073e6; /* Change color on hover */
         }
         h2 {
             color: #0073e6;
@@ -33,13 +39,17 @@
             list-style-type: none;
             padding: 0;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
         ul li {
             background-color: #d2e1f1;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s; /* Smooth scale effect */
+        }
+        ul li:hover {
+            transform: scale(1.02); /* Scale up on hover */
         }
         ul li a {
             text-decoration: none;
@@ -51,10 +61,26 @@
         }
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             background-color: #c6ddf4;
             color: #ea0f0f;
             margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Subtle shadow for footer */
+        }
+        button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+        button:hover {
+            background-color: #005bb5; /* Darker shade on hover */
         }
     </style>
 </head>
@@ -96,14 +122,26 @@
     </section>
     
     <footer>
-        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <p>Explore more projects on <a href="https://github.com/kumarashwani1208" target="_blank">GitHub</a></p>
+        <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
+        <p>Explore more projects on <a href="https://github.com/12ashwani" target="_blank">GitHub</a></p>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" title="Go to top">Top</button>
+    <button id="scrollToTopBtn" title="Go to top" onclick="scrollToTop()">Top</button>
 
     <!-- Scroll to Bottom Button -->
-    <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
+    <button id="scrollToBottomBtn" title="Go to bottom" onclick="scrollToBottom()">Bottom</button>
+
+    <script>
+        // Scroll to Top function
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Scroll to Bottom function
+        function scrollToBottom() {
+            window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>
