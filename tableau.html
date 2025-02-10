@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau Projects</title>
     <style>
+<<<<<<< HEAD
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -48,12 +49,83 @@
             text-align: center;
             margin: 0 0 20px;
             line-height: 1.6;
+=======
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+>>>>>>> daa3bf8 (Initial commit)
         }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffff66;
+            transform: translateY(-3px);
+        }
+
+        section#projects {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff8c00;
+            border-bottom: 3px solid #ff8c00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
+
         ul li {
+<<<<<<< HEAD
             background-color: #d2e1f1;
             margin: 10px 0;
             padding: 15px;
@@ -62,9 +134,27 @@
         }
         ul li:hover {
             background-color: #c5d7e8;
+=======
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+>>>>>>> daa3bf8 (Initial commit)
         }
+
+        ul li:hover {
+            background-color: #ff5733;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
+            color: white;
+        }
+
         ul li a {
+            color: #ff8c00;
             text-decoration: none;
+<<<<<<< HEAD
             color: #0e11bc;
             font-weight: bold;
             display: block;
@@ -94,6 +184,58 @@
         }
         footer a:hover {
             text-decoration: underline;
+=======
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul li:hover a {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #ffff66;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff4500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            section#projects {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+>>>>>>> daa3bf8 (Initial commit)
         }
     </style>
 </head>
@@ -101,15 +243,16 @@
     <header>
         <h1>Tableau Projects</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Excel.html">Excel Projects</a>
-            <a href="tableau.html">Tableau Projects</a>
-            <a href="ml.html">Machine Learning Projects</a>
-            <a href="nlp.html">NLP Projects</a>
+            <a href="index.html" aria-label="Navigate to Home Page">Home</a>
+            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
+            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
+            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
+            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
         </nav>
     </header>
 
     <section id="projects">
+<<<<<<< HEAD
         <h2>Tableau Projects</h2>
         <p>
             Explore my Tableau projects where I’ve crafted insightful dashboards and data visualizations. 
@@ -124,12 +267,28 @@
                 <a href="https://public.tableau.com/app/profile/ashwani.kumar4721/viz/Book14_17107093459630/Dashboard5" target="_blank">Super Store Sales Dashboard</a><br>
                 Developed a comprehensive dashboard for a Super Store to visualize sales performance across various product categories.
             </li>
+=======
+        <h2>My Tableau Projects</h2>
+        <p>
+            Explore my Tableau projects where I’ve crafted insightful dashboards and data visualizations. These projects demonstrate my ability to transform complex data into clear, actionable insights using Tableau's powerful visualization tools.
+        </p>
+        <ul>
+            <li><a href="https://public.tableau.com/views/sales-dashboard" target="_blank" aria-label="View Sales Dashboard">1. Sales Dashboard</a></li>
+            <li><a href="https://public.tableau.com/app/profile/ashwani.kumar4721" target="_blank" aria-label="View Super Store Sales Dashboard">2. Super Store Sales Dashboard</a></li>
+>>>>>>> daa3bf8 (Initial commit)
         </ul>
     </section>
     
     <footer>
+<<<<<<< HEAD
         <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
         <p>Explore My More work on <a href="https://public.tableau.com/app/profile/ashwani.kumar4721/vizzes" target="_blank">Tableau</a></p>
     </footer>
+=======
+        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a> |  <a href="https://github.com/12ashwani" target="_blank">GitHub</a></p>
+        <p>&copy; 2025 Ashwani Kumar</p>
+        </footer>
+>>>>>>> daa3bf8 (Initial commit)
 </body>
 </html>

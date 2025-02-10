@@ -4,212 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashwani Kumar's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px 0;
+        .center-content {
             text-align: center;
-            border-radius: 8px 8px 0 0;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #6d9295;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(17, 15, 15, 0.1);
         }
-        nav a {
-            margin: 0 15px;
-            color: #fbfbfb;
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: #ff8c00;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
-        nav a:hover {
-            color: #ffd700;
-        }
-        section {
-            margin: 20px 0;
-        }
-        h2 {
-            color: #0073e6;
-            border-bottom: 2px solid #0073e6;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background-color: #d2e1f1;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.2s;
-        }
-        ul li:hover {
-            transform: scale(1.02);
+        ul li:hover a {
+            color: white;
         }
         footer {
             text-align: center;
-            padding: 20px 0;
-            background-color: #c6ddf4;
-            color: #333;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
+            padding: 30px;
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
         }
-        .center-content {
-            text-align: center;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #e1e3ba;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(102, 71, 71, 0.1);
-        }
-        ul li a {
+        footer a {
+            color: #ffff66;
             text-decoration: none;
-            color: #0e11bc;
+            color: #2694a2;
             font-weight: bold;
         }
-        ul li:hover {
-    background-color: #6a9fb2; /* Change this to your desired background color */
-    transform: scale(1.02);
-              }
-
-        
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 10px 0;
-            }
+        ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I'm Ashwani Kumar, a Data Science and Machine Learning enthusiast.</p>
+        <p>Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast.</p>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Excel.html">Excel Projects</a>
-            <a href="tableau.html">Tableau Projects</a>
-            <a href="ml.html">Machine Learning Projects</a>
-            <a href="nlp.html">NLP Projects</a>
+            <a href="#profile">Profile</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Professional Experience</a>
+            <a href="#education">Education</a>
+            <a href="#certificates">Certificates & Awards</a>
         </nav>
     </header>
 
-    <div class="container">
-        <section id="about-me">
-            <div class="center-content">
-                <h2>About Me</h2>
-                <p>I am a self-motivated and result-oriented Machine Learning Engineer and Data Analyst with a robust background in Electronics and Communication Engineering.
-                    My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience across various domains, including fraud detection, quality control, and business development, I specialize in developing, deploying, and optimizing machine learning models.</p>
-                <p>My expertise in Python, SQL, and leading machine learning libraries enables me to uncover actionable insights and build predictive models that drive business impact. I bring a unique perspective to data science by blending technical proficiency with a deep understanding of business needs and quality standards. 
-                    Whether it's creating interactive visualizations, developing intelligent systems, or solving complex challenges, I am committed to delivering data-driven solutions that align with organizational goals.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <p><strong>AKTU, Lucknow, India</strong> (July 2014 - July 2018)</p>
-            <p>B.Tech in Electronics and Communication Engineering (ECE)</p>
-            <p>Percentage: 70%</p>
-
-            <p><strong>Data Science Bootcamp</strong></p>
-            <p>Upgrad | Dec 2023 - Jul 2024</p>
-            <p>7-month intensive program focused on in-demand skills:</p>
-            <ul>
-                <li>Data Analysis: SQL, MS Excel, Statistics</li>
-                <li>Data Visualization: Tableau, Power BI</li>
-                <li>Databases: MySQL, MongoDB</li>
-                <li>Programming: Python</li>
-                <li>Python Libraries and Frameworks: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow</li>
-                <li>Tools: Git, GitHub, ChatGPT, Google Colab, VS Code, Anaconda</li>
-                <li>Machine Learning (ML)</li>
-                <li>Data Engineering</li>
-                <li>Natural Language Processing (NLP)</li>
-                <li>Deep Learning</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <h3>Operation Executive</h3>
-            <p>Ewour Waste Management · Full-time, Noida | Mar 2024 - Present</p>
-            <ul>
-                <li><strong>Licensing and Permit Applications:</strong> Prepare, submit, and manage applications for licenses such as Import-Export Code, FSSAI, Steel NOC, Waste Management, Battery EPR, Plastic EPR, Electronics EPR, and CDSCO
-                    Track application progress and address queries or requests from regulatory authorities.</li>
-                <li><strong>Regulatory Compliance:</strong> Stay updated on regulations, laws, and guidelines from regulatory bodies like FSSAI, DGFT (Directorate General of Foreign Trade), 
-                    Central Pollution Control Board (CPCB), CDSCO, and EPR-specific mandates</li>
-                <li><strong>Documentation and Record-Keeping:</strong> Maintain organized and accurate records of all documentation related to applications, approvals, permits, EPR compliance reports, and communication with authorities</li>
-                <li><strong>EPR (Extended Producer Responsibility) Compliance:</strong> Oversee compliance for EPR requirements specific to Batteries, Plastics, and Electronics, ensuring alignment with the CPCB guidelines
-                    Submit required EPR documentation, reports, and product-specific data to authorities in adherence with government regulations</li>
-                
-
-            </ul>
-
-            <h3>Business Development</h3>
-            <p>Digital Notebook, Noida | Jun 2023 - Nov 2023</p>
-            <ul>
-                <li>Provided detailed information about company services, understood customer requirements, and recommended optimal solutions.</li>
-                <li>Managed inbound and outbound communication, leveraging data to contact potential clients, explain services, and arrange meetings.</li>
-                <li>Maintained and updated client data in Excel and Google Sheets, ensuring efficient follow-up and business recovery.</li>
-            </ul>
-
-            <h3>Quality Inspector</h3>
-            <p>UNO MINDA, Haridwar | Jun 2020 - Dec 2022</p>
-            <ul>
-                <li>Monitored and enforced quality control standards within the production facility, ensuring compliance with industry standards.</li>
-                <li>Conducted regular inspections, comprehensive testing, and root cause analysis to maintain high product quality.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, SQL</li>
-                <li><strong>Libraries/Frameworks:</strong> NumPy, Pandas, Seaborn, Matplotlib, Scikit-learn, TensorFlow</li>
-                <li><strong>Tools/Platforms:</strong> Git, VS Code, Anaconda, Google Colab, ChatGPT</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-            <p><strong>Credit Card Fraud Detection</strong></p>
-            <p><em>Tools: Streamlit, Sklearn</em></p>
-            <p>This project focuses on developing a machine learning model to detect fraudulent credit card transactions, aiming to identify potential frauds in real-time and reduce the impact of fraudulent activities.</p>
-
-            <p><strong>My Portfolio Web Page</strong></p>
-            <p><em>Tools: HTML, CSS</em></p>
-            <p>Created a professional portfolio website showcasing expertise in data science, with sections for machine learning, business intelligence, and NLP projects.</p>
-        </section>
-
-        <section>
-            <h2>Achievements</h2>
-            <p><strong>Hackathon Winner (1st Rank - eCommerce Product Categorization)</strong></p>
-            <p>Secured the top position in the eCommerce Product Categorization hackathon by developing a high-performing text classification model. Demonstrated exceptional problem-solving skills, innovative feature engineering, and advanced model fine-tuning, resulting in significant improvements in categorization accuracy. Delivered comprehensive visualizations that provided key insights into data patterns and category distributions.</p>
-        </section>
-    </div>
-
+    <section id="about-me">
+        <!-- <div class="center-content"> -->
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast with a robust background in Electronics and Communication Engineering.
+                My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience in quality 
+                control, business development,</p>
+            </p>I am committed to leveraging my skills in Python, SQL, and machine learning to solve complex challenges. 
+                My work spans across developing data-driven models, particularly in fraud detection, and creating interactive visualizations and intelligent systems.
+                I bring a unique perspective to data science, blending technical expertise with a deep understanding of business needs and quality standards.
+            </p>
+        </div>
+    </section>
     <footer>
-        <p>Contact me at: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a></p>
-        <p>&copy; 2024 Ashwani Kumar. All rights reserved.</p>
+        <!-- <div class="center-content"> -->
+            <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
+            <p>Know more about me:</p>
+            <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>

@@ -5,87 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excel Projects</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px 0;
+        .center-content {
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fbfbfb;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-            transform: scale(1.05);
-
-        }
-        nav a:hover {
-            color: #ffd700;
-
-        }
-        h2 {
-            color: #0073e6;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 28px;
-        }
-        p {
-            text-align: center;
+            margin: 20px auto;
             max-width: 800px;
-            margin: 10px auto;
-            line-height: 1.6;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+
+        h2 {
+            color: #ff8c00;
+            border-bottom: 3px solid #ff8c00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
-            max-width: 800px;
-            margin: 20px auto;
         }
+
         ul li {
-            background-color: #d2e1f1;
             margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        ul li:hover {
+            background-color: #ff5733;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
+            color: white;
+        }
+
         ul li a {
+            color: #ff8c00;
             text-decoration: none;
-            color: #de2232;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul li:hover a {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #ffff66;
+            text-decoration: none;
+            color: #2694a2;
             font-weight: bold;
         }
         ul li a:hover {
             text-decoration: underline;
-            color: #ff4500;
-        }
-        ul li:hover {
-    background-color: #6a95b2; /* Change this to your desired background color */
-    transform: scale(1.05);
-              }
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #c6ddf4;
-            color: #141010;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        footer a {
-            color: #0073e6;
-            text-decoration: none;
-        
-        }
-        footer a:hover {
-            text-decoration: underline;
-           
         }
     </style>
 </head>
@@ -95,6 +77,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="Excel.html">Excel Projects</a>
+
             <a href="tableau.html">Tableau Projects</a>
             <a href="ml.html">Machine Learning Projects</a>
             <a href="nlp.html">NLP Projects</a>
@@ -102,29 +85,23 @@
     </header>
 
     <section id="projects">
-        <h2>Excel Projects</h2>
-        <p>
-            Explore my Excel projects where I've utilized advanced Excel functionalities to analyze data, create dashboards, and generate actionable insights. These projects highlight my ability to handle complex data sets, create visualizations, and use Excel's powerful tools for effective data analysis.
-        </p>
-        <ul>
-            <li>
-                <a href="https://github.com/12ashwani/Excel-Project-2" target="_blank">Sales Dashboard</a><br>
-                This project focuses on analyzing call center sales data to identify key patterns and trends in customer interactions, sales performance, and agent efficiency. By examining metrics such as call duration, conversion rates, and sales by region, we aim to uncover insights that can drive more effective sales strategies and improve overall performance.
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Excel_Project" target="_blank">Product Sales Analysis</a><br>
-                In this product sales analysis, we aim to uncover key trends in sales performance across different product categories, regions, and customer segments. By examining metrics such as revenue, unit sales, and seasonal patterns, this project will provide valuable insights to help drive more informed business decisions.
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Excel-Project-3" target="_blank">HR Data Analysis</a><br>
-                This HR Data Analysis project focuses on key factors influencing workforce dynamics, including salary trends, turnover rates, and performance. The insights derived from this analysis are crucial in enhancing employee retention, optimizing compensation structures, and improving organizational efficiency.
-            </li>
-        </ul>
+        <!-- <div class="center-content"> -->
+            <h2>My Excel Projects</h2>
+            <p>
+                Dive into my Excel projects where I've utilized advanced Excel functionalities to analyze data, create dashboards, and generate actionable insights. These projects showcase my ability to handle complex data sets, create visualizations, and use Excel's powerful tools for effective data analysis.
+            </p>
+            <ul>
+                <li><a href="https://github.com/12ashwani/Excel-Project-1" target="_blank">1. Sales Performance Analysis</a></li>
+                <li><a href="https://github.com/12ashwani/Excel-Project-2" target="_blank">2. Financial Forecasting</a></li>
+                <li><a href="https://github.com/12ashwani/Excel-Project-3" target="_blank">3. Inventory Management Dashboard</a></li>
+                <li><a href="https://github.com/12ashwani/Excel-Project-4" target="_blank">4. Customer Segmentation Analysis</a></li>
+            </ul>
+        </div>
     </section>
     
     <footer>
-        <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
-        <p>Explore more projects on <a href="https://github.com/12ashwani" target="_blank">GitHub</a></p>
+        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
     </footer>
 </body>
 </html>
