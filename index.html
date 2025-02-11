@@ -3,23 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashwani Kumar's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ashwani Kumar - Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        .center-content {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
+            color: white;
             text-align: center;
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 20px;
-            background-color: #6d9295;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(17, 15, 15, 0.1);
+            padding: 40px 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffff66;
+            transform: translateY(-3px);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff8c00;
+            border-bottom: 3px solid #ff8c00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
         }
         ul {
             list-style-type: none;
         }
         ul li {
-            margin: 10px 0;
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        ul li:hover {
+            background-color: #ff5733;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
+            color: white;
         }
         ul li a {
             color: #ff8c00;
@@ -41,18 +101,48 @@
         footer a {
             color: #ffff66;
             text-decoration: none;
-            color: #2694a2;
             font-weight: bold;
+            transition: color 0.3s;
         }
-        ul li a:hover {
-            text-decoration: underline;
+        footer a:hover {
+            color: #ff4500;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .section ul li {
+            font-size: 1rem;
+        }
+        .section ul li strong {
+            color: #ff8c00;
+        }
+        .section ul li:hover strong {
+            color: white;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast.</p>
+        <h1>Ashwani Kumar - Data Analyst</h1>
         <nav>
             <a href="#profile">Profile</a>
             <a href="#skills">Skills</a>
@@ -62,26 +152,26 @@
             <a href="#certificates">Certificates & Awards</a>
         </nav>
     </header>
-
-    <section id="about-me">
-        <!-- <div class="center-content"> -->
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Ashwani Kumar, a Data Analyst and Machine Learning enthusiast with a robust background in Electronics and Communication Engineering.
-                My passion lies in harnessing the power of data to drive meaningful insights and innovative solutions. With hands-on experience in quality 
-                control, business development,</p>
-            </p>I am committed to leveraging my skills in Python, SQL, and machine learning to solve complex challenges. 
-                My work spans across developing data-driven models, particularly in fraud detection, and creating interactive visualizations and intelligent systems.
-                I bring a unique perspective to data science, blending technical expertise with a deep understanding of business needs and quality standards.
-            </p>
-        </div>
-    </section>
+    <div class="container">
+        <section id="profile" class="section">
+            <h2>Profile</h2>
+            <p>Self-motivated Data Analyst and Machine Learning enthusiast with a strong Electronics and Communication Engineering background. Proficient in developing predictive models and providing data-driven solutions.</p>
+        </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python</li>
+                <li><strong>Data Analytics:</strong> Pandas, Seaborn, Matplotlib, Plotly</li>
+                <li><strong>Machine Learning:</strong> Supervised & Unsupervised Learning, Model Evaluation, Optimization</li>
+                <li><strong>Tools & Platforms:</strong> Advanced Excel, Tableau, Git, Google Colab, VS Code, Anaconda</li>
+                <li><strong>Databases:</strong> MySQL</li>
+                <li><strong>Soft Skills:</strong> Learning Attitude, Problem-Solving, Teamwork, Adaptability, Growth Mindset</li>
+            </ul>
+        </section>
+    </div>
     <footer>
-        <!-- <div class="center-content"> -->
-            <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-            <p>Know more about me:</p>
-            <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
-        </div>
+        <p>Find me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        <p>&copy; 2025 Ashwani Kumar</p>
     </footer>
 </body>
 </html>
