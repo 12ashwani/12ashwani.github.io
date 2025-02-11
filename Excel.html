@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excel Projects</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        .center-content {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
+            color: white;
             text-align: center;
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 20px;
+            padding: 40px 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffff66;
+            transform: translateY(-3px);
+        }
+
+        section#projects {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -26,11 +69,16 @@
 
         ul {
             list-style-type: none;
-            padding: 0;
+            margin-top: 20px;
         }
 
         ul li {
-            margin: 10px 0;
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         ul li:hover {
@@ -63,11 +111,31 @@
         footer a {
             color: #ffff66;
             text-decoration: none;
-            color: #2694a2;
             font-weight: bold;
+            transition: color 0.3s;
         }
-        ul li a:hover {
-            text-decoration: underline;
+
+        footer a:hover {
+            color: #ff4500;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            section#projects {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -75,33 +143,31 @@
     <header>
         <h1>Excel Projects</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Excel.html">Excel Projects</a>
-
-            <a href="tableau.html">Tableau Projects</a>
-            <a href="ml.html">Machine Learning Projects</a>
-            <a href="nlp.html">NLP Projects</a>
+            <a href="index.html" aria-label="Navigate to Home Page">Home</a>
+            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
+            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
+            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
+            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
         </nav>
     </header>
 
     <section id="projects">
-        <!-- <div class="center-content"> -->
-            <h2>My Excel Projects</h2>
-            <p>
-                Dive into my Excel projects where I've utilized advanced Excel functionalities to analyze data, create dashboards, and generate actionable insights. These projects showcase my ability to handle complex data sets, create visualizations, and use Excel's powerful tools for effective data analysis.
-            </p>
-            <ul>
-                <li><a href="https://github.com/12ashwani/Excel-Project-1" target="_blank">1. Sales Performance Analysis</a></li>
-                <li><a href="https://github.com/12ashwani/Excel-Project-2" target="_blank">2. Financial Forecasting</a></li>
-                <li><a href="https://github.com/12ashwani/Excel-Project-3" target="_blank">3. Inventory Management Dashboard</a></li>
-                <li><a href="https://github.com/12ashwani/Excel-Project-4" target="_blank">4. Customer Segmentation Analysis</a></li>
-            </ul>
-        </div>
+        <h2>My Excel Projects</h2>
+        <p>
+            Dive into my Excel projects where I've utilized advanced Excel functionalities to analyze data, create dashboards, and generate actionable insights. 
+            These projects showcase my ability to handle complex data sets, create visualizations, and use Excel's powerful tools for effective data analysis.
+        </p>
+        <ul>
+            <li><a href="https://github.com/12ashwani/Excel-Project-1" target="_blank">1. Sales Performance Analysis</a></li>
+            <li><a href="https://github.com/12ashwani/Excel-Project-2" target="_blank">2. Financial Forecasting</a></li>
+            <li><a href="https://github.com/12ashwani/Excel-Project-3" target="_blank">3. Inventory Management Dashboard</a></li>
+            <li><a href="https://github.com/12ashwani/Excel-Project-4" target="_blank">4. Customer Segmentation Analysis</a></li>
+        </ul>
     </section>
     
     <footer>
         <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" aria-label="View my LinkedIn profile">View on LinkedIn</a>
     </footer>
 </body>
 </html>
