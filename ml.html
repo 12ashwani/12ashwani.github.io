@@ -1,13 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Projects</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffff66;
+            transform: translateY(-3px);
+        }
+
+        section#projects {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff8c00;
+            border-bottom: 3px solid #ff8c00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        ul li {
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li:hover {
+            background-color: #ff5733;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
+            color: white;
+        }
+
+        ul li a {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul li:hover a {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #ffff66;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff4500;
+        }
+
+        /* Scroll Button Style */
+        #scrollToTopBtn, #scrollToBottomBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToBottomBtn {
+            bottom: 70px;
+        }
+
+        #scrollToTopBtn:hover, #scrollToBottomBtn:hover {
+            background-color: #ff4500;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            section#projects {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>Machine Learning Projects</h1>
@@ -19,39 +176,29 @@
             <a href="nlp.html">NLP Projects</a>
         </nav>
     </header>
-
+    
     <section id="projects">
         <section id="about-me">
             <h2>Machine Learning</h2>
             <p>
-                Dive into my machine learning projects, where I've applied advanced data science techniques to 
-                solve real-world challenges across various domains. From assessing loan repayment capabilities in 
-                the banking sector to categorizing products for e-commerce platforms and detecting fraudulent credit card transactions, 
-                each project demonstrates my ability to preprocess data, select and fine-tune models, and deploy solutions using 
-                cutting-edge tools like TensorFlow, scikit-learn, and Streamlit. These projects not only showcase my technical skills but also
-                highlight my commitment to creating practical, data-driven solutions that address complex business needs.
+                Dive into my machine learning projects, where I've applied advanced data science techniques to solve real-world challenges across various domains. 
+                From assessing loan repayment capabilities in the banking sector to categorizing products for e-commerce platforms and detecting fraudulent credit card transactions, 
+                each project demonstrates my ability to preprocess data, select and fine-tune models, and deploy solutions using cutting-edge tools like TensorFlow, scikit-learn, and Streamlit. 
+                These projects not only showcase my technical skills but also highlight my commitment to creating practical, data-driven solutions that address complex business needs.
             </p>
         </section>
         <h2>My Machine Learning Projects</h2>
         <ul>
             <li>
-                <!-- <h3>Loan Repayment Assessment in Banking</h3> -->
-                <!-- <p>Developed a model to predict loan repayment capabilities in the banking sector using various machine learning algorithms.</p> -->
                 <a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank">1 Loan Repayment Assessment in Banking</a>
             </li>
             <li>
-                <!-- <h3>E-commerce Product Categorization</h3> -->
-                <!-- <p>Implemented a classification model to categorize products for an e-commerce platform using machine learning techniques.</p> -->
                 <a href="https://github.com/12ashwani/E-comerc-product_category" target="_blank">2 E-commerce Product Categorization</a>
             </li>
             <li>
-                <!-- <h3>Credit Card Fraud Detection</h3> -->
-                <!-- <p>Created a fraud detection system to identify suspicious credit card transactions using advanced machine learning methods.</p> -->
                 <a href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank">3 Credit Card Fraud Detection</a>
             </li>
             <li>
-                <!-- <h3>Student Performance Prediction</h3> -->
-                <!-- <p>Developed a model to predict student performance based on various features using machine learning techniques.</p> -->
                 <a href="https://github.com/12ashwani/student_ml" target="_blank">4 Student Performance Prediction</a>
             </li>
         </ul>
@@ -68,7 +215,31 @@
     <!-- Scroll to Bottom Button -->
     <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
 
-    <script src="scripts.js"></script>
-</body>
+    <script>
+        // Get the buttons
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        var scrollToBottomBtn = document.getElementById("scrollToBottomBtn");
 
+        // When the user scrolls down 200px from the top of the document, show the buttons
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+                scrollToBottomBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+                scrollToBottomBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the document when the "Top" button is clicked
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+
+        // Scroll to the bottom of the document when the "Bottom" button is clicked
+        scrollToBottomBtn.onclick = function() {
+            window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+        };
+    </script>
+</body>
 </html>
