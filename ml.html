@@ -54,6 +54,21 @@
             transform: translateY(-3px);
         }
 
+        /* Dropdown styling */
+        .dropdown {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .dropdown select {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
         section#projects {
             width: 90%;
             max-width: 1200px;
@@ -170,23 +185,21 @@
         <h1>Machine Learning Projects</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="Excel.html">Excel Projects</a>
-            <a href="tableau.html">Tableau Projects</a>
-            <a href="ml.html">Machine Learning Projects</a>
-            <a href="nlp.html">NLP Projects</a>
+            <a href="ml.html">Machine Learning</a>
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <select id="pageDropdown" onchange="navigateToPage()">
+                    <option value="">Select a Category</option>
+                    <option value="Excel.html">Excel Projects</option>
+                    <option value="tableau.html">Tableau Projects</option>
+                    <option value="nlp.html">NLP Projects</option>
+                </select>
+            </div>
         </nav>
     </header>
-    
+
     <section id="projects">
-        <section id="about-me">
-            <h2>Machine Learning</h2>
-            <p>
-                Dive into my machine learning projects, where I've applied advanced data science techniques to solve real-world challenges across various domains. 
-                From assessing loan repayment capabilities in the banking sector to categorizing products for e-commerce platforms and detecting fraudulent credit card transactions, 
-                each project demonstrates my ability to preprocess data, select and fine-tune models, and deploy solutions using cutting-edge tools like TensorFlow, scikit-learn, and Streamlit. 
-                These projects not only showcase my technical skills but also highlight my commitment to creating practical, data-driven solutions that address complex business needs.
-            </p>
-        </section>
         <h2>My Machine Learning Projects</h2>
         <ul>
             <li>
@@ -216,11 +229,16 @@
     <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
 
     <script>
-        // Get the buttons
+        function navigateToPage() {
+            var selectedPage = document.getElementById("pageDropdown").value;
+            if (selectedPage) {
+                window.location.href = selectedPage;
+            }
+        }
+
         var scrollToTopBtn = document.getElementById("scrollToTopBtn");
         var scrollToBottomBtn = document.getElementById("scrollToBottomBtn");
 
-        // When the user scrolls down 200px from the top of the document, show the buttons
         window.onscroll = function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 scrollToTopBtn.style.display = "block";
@@ -231,12 +249,10 @@
             }
         };
 
-        // Scroll to the top of the document when the "Top" button is clicked
         scrollToTopBtn.onclick = function() {
             window.scrollTo({top: 0, behavior: 'smooth'});
         };
 
-        // Scroll to the bottom of the document when the "Bottom" button is clicked
         scrollToBottomBtn.onclick = function() {
             window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
         };
