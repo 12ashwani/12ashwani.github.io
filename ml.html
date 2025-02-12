@@ -25,6 +25,7 @@
             padding: 40px 0;
             width: 100%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
 
         header h1 {
@@ -37,36 +38,57 @@
             to { opacity: 1; }
         }
 
-        nav {
+        /* Navigation Menu */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
         }
 
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffff66;
-            transform: translateY(-3px);
-        }
-
-        /* Dropdown styling */
-        .dropdown {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        .dropdown select {
-            padding: 8px;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: none;
+        /* Dropdown Button (≡) */
+        .menu-icon {
+            font-size: 2rem;
             cursor: pointer;
-            outline: none;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            width: 200px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .dropdown-menu a {
+            padding: 12px;
+            text-decoration: none;
+            color: #ff4500;
+            font-weight: bold;
+            display: block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ff4500;
+            color: white;
+        }
+
+        /* Show Dropdown on Hover */
+        .nav-container:hover .dropdown-menu {
+            display: flex;
         }
 
         section#projects {
@@ -140,36 +162,9 @@
             color: #ff4500;
         }
 
-        /* Scroll Button Style */
-        #scrollToTopBtn, #scrollToBottomBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px;
-            background-color: #ff8c00;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 16px;
-            cursor: pointer;
-            display: none;
-        }
-
-        #scrollToBottomBtn {
-            bottom: 70px;
-        }
-
-        #scrollToTopBtn:hover, #scrollToBottomBtn:hover {
-            background-color: #ff4500;
-        }
-
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
-            }
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9rem;
             }
             section#projects {
                 padding: 20px;
@@ -183,20 +178,18 @@
 <body>
     <header>
         <h1>Machine Learning Projects</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="ml.html">Machine Learning</a>
-
-            <!-- Dropdown Menu -->
-            <div class="dropdown">
-                <select id="pageDropdown" onchange="navigateToPage()">
-                    <option value="">Select a Category</option>
-                    <option value="Excel.html">Excel Projects</option>
-                    <option value="tableau.html">Tableau Projects</option>
-                    <option value="nlp.html">NLP Projects</option>
-                </select>
+        
+        <!-- Navigation Menu -->
+        <div class="nav-container">
+            <button class="menu-icon">≡</button>
+            <div class="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="Excel.html">Excel Projects</a>
+                <a href="tableau.html">Tableau Projects</a>
+                <a href="ml.html">Machine Learning Projects</a>
+                <a href="nlp.html">NLP Projects</a>
             </div>
-        </nav>
+        </div>
     </header>
 
     <section id="projects">
@@ -221,41 +214,5 @@
         <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
         <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" title="Go to top">Top</button>
-
-    <!-- Scroll to Bottom Button -->
-    <button id="scrollToBottomBtn" title="Go to bottom">Bottom</button>
-
-    <script>
-        function navigateToPage() {
-            var selectedPage = document.getElementById("pageDropdown").value;
-            if (selectedPage) {
-                window.location.href = selectedPage;
-            }
-        }
-
-        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        var scrollToBottomBtn = document.getElementById("scrollToBottomBtn");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollToTopBtn.style.display = "block";
-                scrollToBottomBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-                scrollToBottomBtn.style.display = "none";
-            }
-        };
-
-        scrollToTopBtn.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
-
-        scrollToBottomBtn.onclick = function() {
-            window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-        };
-    </script>
 </body>
 </html>
