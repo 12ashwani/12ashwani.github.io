@@ -2,203 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashwani Kumar - Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(90deg, #ff8c00, #ff4500);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-        nav a:hover {
-            color: #ffff66;
-            transform: translateY(-3px);
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #ff8c00;
-            border-bottom: 3px solid #ff8c00;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
-        ul {
-            list-style-type: none;
-        }
-        ul li {
-            background-color: #fff;
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        ul li:hover {
-            background-color: #ff5733;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
-            color: white;
-        }
-        ul li a {
-            color: #ff8c00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        ul li:hover a {
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(90deg, #ff4500, #ff8c00);
-            color: white;
-            margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-        footer a {
-            color: #ffff66;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        footer a:hover {
-            color: #ff4500;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section p {
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-        .section ul li {
-            font-size: 1rem;
-        }
-        .section ul li strong {
-            color: #ff8c00;
-        }
-        .section ul li:hover strong {
-            color: white;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9rem;
-            }
-            .container {
-                padding: 20px;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background: #f9f9f9; color: #333; }
+
+        header { background: linear-gradient(90deg, #ff8c00, #ff4500); color: white; text-align: center; padding: 20px 0; }
+        nav { position: sticky; top: 0; z-index: 80; background: rgba(255, 140, 0, 0.95); padding: 15px 0; backdrop-filter: blur(10px); }
+        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ffff66; }
+
+        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
+        .profile-img { width: 200px; height: 180px; border-radius: 50%; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.2); object-fit: cover; }
+
+        .container { max-width: 1400px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        h2 { font-size: 2rem; color: #ff8c00; margin-bottom: 20px; border-bottom: 3px solid #ff8c00; padding-bottom: 10px; }
+
+        .skill-bar { background: #eee; border-radius: 10px; margin: 10px 0; }
+        .skill-progress { height: 20px; border-radius: 10px; background: linear-gradient(90deg, #ff8c00, #ff4500); width: 0; color: white; padding-left: 10px; font-size: 14px; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .project-card:hover { transform: translateY(-5px); }
+        .animated-button { background: #ff8c00; padding: 10px 20px; color: white; text-decoration: none; border-radius: 6px; display: inline-block; margin-top: 10px; transition: 0.3s; }
+        .animated-button:hover { background: #ff4500; }
+
+        .contact-form { max-width: 600px; margin: auto; }
+        .form-group { margin-bottom: 15px; }
+        input, textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; }
+
+        footer { text-align: center; padding: 30px; background: linear-gradient(90deg, #ff4500, #ff8c00); color: white; margin-top: 40px; }
+        footer a { color: #ffff66; margin: 0 10px; text-decoration: none; font-size: 1.2rem; }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 480px) {
+            .profile-img { width: 150px; height: 150px; }
+            h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ashwani Kumar - Data Analyst</h1>
+        <div class="profile-container">
+            <img src="C:\Users\admin\Downloads\ashwani imag.png" alt="Ashwani Kumar" class="profile-img">
+            <h1>Ashwani Kumar<br><span style="font-size: 1.2rem;">Data Analyst</span></h1>
+        </div>
         <nav>
             <a href="#profile">Profile</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#experience">Professional Experience</a>
+            <a href="#experience">Experience</a>
             <a href="#education">Education</a>
-            <a href="#certificates">Certificates & Awards</a>
-
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <div class="container">
         <section id="profile" class="section">
             <h2>Profile</h2>
             <p>Self-motivated Data Analyst and Machine Learning enthusiast with a strong Electronics and Communication Engineering background. Proficient in developing predictive models and providing data-driven solutions.</p>
+            <p>🔹 Quality Control & Business Development Experience: With 2.5 years as a Quality Inspector, I developed expertise in data collection, root cause analysis, and process optimization to improve operational efficiency. In my role in business development, I honed my skills in market research, customer behavior analysis, and sales analytics.</p>
+            <p>🔹 Data Science & Analytics Expertise: Having completed an intensive Data Science Bootcamp, I have gained hands-on experience with Python, SQL, Machine Learning, Data Visualization (using tools like Power BI and Tableau), and statistical analysis. I specialize in transforming raw data into actionable insights through data wrangling, statistical modeling, and the creation of interactive dashboards.</p>
+            <p>🎯 Currently seeking: Data Analyst roles to help businesses unlock the power of data and make informed decisions.</p>
         </section>
+
         <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python</li>
-                <li><strong>Data Analytics:</strong> Numpy,Pandas, Seaborn, Matplotlib</li>
-                <li><strong>Machine Learning:</strong> Supervised & Unsupervised Learning, Model Evaluation, Optimization</li>
-                <li><strong>Tools & Platforms:</strong> Advanced Excel, Tableau, Git, Google Colab, VS Code, Anaconda</li>
-                <li><strong>Databases:</strong> MySQL</li>
-                <li><strong>Soft Skills:</strong> Learning Attitude, Problem-Solving, Teamwork, Adaptability, Growth Mindset</li>
-            </ul>
+            <h2>Technical Skills</h2>
+            <div class="skill-bar"><div class="skill-progress" style="width:90%;">Python 90%</div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:85%;">Machine Learning 85%</div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:80%;">Tableau 80%</div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:75%;">Excel 75%</div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:70%;">MySQL 70%</div></div>
+
+            <h3>Business Intelligence & Analytics</h3>
+            <p>Data Visualization, Statistical Analysis, Predictive Modeling</p>
+
+            <h3>Tools</h3>
+            <p>Jupyter, PyCharm, Tableau, Power BI, SQL (MySQL, NoSQL)</p>
         </section>
+
         <section id="projects" class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="Excel.html">Excel Projects</a></li>
-                <li><a href="tableau.html">Tableau Projects</a></li>
-                <li><a href="ml.html">Machine Learning Projects</a></li>
-                <li><a href="nlp.html">NLP Projects</a></li>
-            </ul>
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Excel Dashboard</h3>
+                    <p>Visual analysis of company performance using pivot tables & charts.</p>
+                    <a href="Excel.html" class="animated-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Tableau Sales Analysis</h3>
+                    <p>Interactive Tableau dashboard showing sales performance.</p>
+                    <a href="tableau.html" class="animated-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>ML Loan Prediction</h3>
+                    <p>Machine learning model predicting loan approval based on customer data.</p>
+                    <a href="ml.html" class="animated-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>NLP Resume Parser</h3>
+                    <p>Natural Language Processing tool to extract structured data from resumes.</p>
+                    <a href="nlp.html" class="animated-button">View Project</a>
+                </div>
+            </div>
         </section>
-        <section id="experience" class="section">
-            <h2>Professional Experience</h2>
-            <ul>
-                <li><a href="experience.html">Experience info</a></li>
-            </ul>
+
+        <section id="experience" class="section"><a href="experience.html" class="animated-button"></a>
+            <h2>Experience </h2>
+            <a href="experience.html" class="animated-button">Experience</a>
+
+            <p><strong>Operation Executive</strong><br>
+            Ewour Waste Management | Dec 2024 – Present | Noida, Uttar Pradesh, India<br>
+            Managing compliance for EPR regulations, including licensing, permit applications, and data management for waste management, plastics, and electronics.</p>
+
+            <p><strong>Operation Executive</strong><br>
+            Tridev Business Solutions | Mar 2024 – Dec 2024 | Noida, Uttar Pradesh, India<br>
+            Managed licensing and permit applications (FSSAI, EPR, CDSCO) and ensured regulatory compliance for various industries.</p>
+
+            <p><strong>Sales Executive</strong><br>
+            Digital Notebook – A Digital Marketing Agency | Feb 2023 – Dec 2023 | Noida, Uttar Pradesh, India<br>
+            Handled sales and market research, utilizing tools to track market trends and identify new customer opportunities.</p>
         </section>
+
         <section id="education" class="section">
             <h2>Education</h2>
-            <p>B.Tech in ECE - Dr. APJ Abdul Kalam Technical University, Lucknow</p>
+            <p><strong>Golden Gate University</strong><br>
+            Data Science Bootcamp | Dec 2023 – Jun 2024<br>
+            Mastered data analysis, visualization, machine learning, NLP, deep learning, and SQL.</p>
+
+            <p><strong>Dr. A.P.J. Abdul Kalam Technical University</strong><br>
+            BTech in Electrical, Electronics & Communications Engineering | Aug 2014 – Aug 2018<br>
+            Graduated with a focus on problem-solving and technical skills.</p>
         </section>
-        <section id="certificates" class="section">
-            <h2>Certificates & Awards</h2>
-            <ul>
-                <li>Data Science Bootcamp (Upgrad) - <a href="https://www.linkedin.com/posts/ashwani-kumar-4aa519149_datascience-machinelearning-nlp-activity-7240566252270673921-pUMr?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate</a></li>
-                <li>Hackathon Winner - Upgrad</li>
-            </ul>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+                <div class="form-group"><textarea rows="1" placeholder="Your Message" required></textarea></div>
+                <button type="submit" class="animated-button">Send Message</button>
+            </form>
         </section>
     </div>
+
     <footer>
-        <p>Find me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
-        <p>&copy; 2025 Ashwani Kumar</p>
+        <div>
+            <a href="https://www.linkedin.com/in/ashwani-kumar" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ashwani-github" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Ashwani Kumar. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Animate skill bars
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.skill-progress').forEach(el => {
+                el.style.width = el.style.width; // Triggers transition
+            });
+        });
+    </script>
 </body>
 </html>
