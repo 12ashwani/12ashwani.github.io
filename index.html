@@ -14,43 +14,61 @@
 
         header { background: linear-gradient(90deg, #ff8c00, #ff4500); color: white; text-align: center; padding: 20px 0; }
         nav { position: sticky; top: 0; z-index: 80; background: rgba(255, 140, 0, 0.95); padding: 15px 0; backdrop-filter: blur(10px); }
-        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
         nav a:hover { color: #ffff66; }
 
         .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
-        .profile-img { width: 200px; height: 180px; border-radius: 50%; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.2); object-fit: cover; }
+        .profile-img { width: 200px; height: 180px; border-radius: 50%; border: 5px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.2); object-fit: cover; animation: fadeIn 2s ease-in-out; }
 
         .container { max-width: 1400px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         h2 { font-size: 2rem; color: #ff8c00; margin-bottom: 20px; border-bottom: 3px solid #ff8c00; padding-bottom: 10px; }
 
-        .skill-bar { background: #eee; border-radius: 10px; margin: 10px 0; }
-        .skill-progress { height: 20px; border-radius: 10px; background: linear-gradient(90deg, #ff8c00, #ff4500); width: 0; color: white; padding-left: 10px; font-size: 14px; }
+        /* Scroll reveal animation */
+        .section { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .section.show { opacity: 1; transform: translateY(0); }
 
+        /* Skill bars */
+        .skill-bar { background: #eee; border-radius: 10px; margin: 10px 0; overflow: hidden; }
+        .skill-progress { height: 20px; border-radius: 10px; background: linear-gradient(90deg, #ff8c00, #ff4500); width: 0; color: white; padding-left: 10px; font-size: 14px; transition: width 1.5s ease-in-out; }
+
+        /* Projects */
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .project-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .project-card:hover { transform: translateY(-5px); }
-        .animated-button { background: #ff8c00; padding: 10px 20px; color: white; text-decoration: none; border-radius: 6px; display: inline-block; margin-top: 10px; transition: 0.3s; }
-        .animated-button:hover { background: #ff4500; }
+        .project-card { background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 15px; backdrop-filter: blur(8px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .project-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
 
+        .animated-button { background: #ff8c00; padding: 10px 20px; color: white; text-decoration: none; border-radius: 6px; display: inline-block; margin-top: 10px; transition: all 0.3s; }
+        .animated-button:hover { background: #ff4500; transform: scale(1.05); }
+
+        /* Contact */
         .contact-form { max-width: 600px; margin: auto; }
         .form-group { margin-bottom: 15px; }
-        input, textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; }
+        input, textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; transition: 0.3s; }
+        input:focus, textarea:focus { border-color: #ff8c00; outline: none; box-shadow: 0 0 5px rgba(255,140,0,0.5); }
 
+        /* Footer */
         footer { text-align: center; padding: 30px; background: linear-gradient(90deg, #ff4500, #ff8c00); color: white; margin-top: 40px; }
-        footer a { color: #ffff66; margin: 0 10px; text-decoration: none; font-size: 1.2rem; }
+        footer a { color: #ffff66; margin: 0 10px; text-decoration: none; font-size: 1.2rem; transition: 0.3s; }
         footer a:hover { color: #fff; }
 
         @media (max-width: 480px) {
             .profile-img { width: 150px; height: 150px; }
             h2 { font-size: 1.5rem; }
         }
+
+        /* Keyframe animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="profile-container">
-            <img src="ashwani.png" alt="Ashwani Kumar" class="profile-img">
-            <h1>Ashwani Kumar<br><span style="font-size: 1.2rem;">Data Analyst</span></h1>
+            <img src="image/ashwani.png" alt="Ashwani Kumar" class="profile-img">
+            <h1>Ashwani Kumar<br>
+              <span id="typed-role" style="font-size: 1.2rem; color:#ffff66;"></span>
+            </h1>
         </div>
         <nav>
             <a href="#profile">Profile</a>
@@ -73,11 +91,11 @@
 
         <section id="skills" class="section">
             <h2>Technical Skills</h2>
-            <div class="skill-bar"><div class="skill-progress" style="width:90%;">Python 90%</div></div>
-            <div class="skill-bar"><div class="skill-progress" style="width:85%;">Machine Learning 85%</div></div>
-            <div class="skill-bar"><div class="skill-progress" style="width:80%;">Tableau 80%</div></div>
-            <div class="skill-bar"><div class="skill-progress" style="width:75%;">Excel 75%</div></div>
-            <div class="skill-bar"><div class="skill-progress" style="width:70%;">MySQL 70%</div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="90%">Python 90%</div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="85%">Machine Learning 85%</div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="80%">Tableau 80%</div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="75%">Excel 75%</div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="70%">MySQL 70%</div></div>
 
             <h3>Business Intelligence & Analytics</h3>
             <p>Data Visualization, Statistical Analysis, Predictive Modeling</p>
@@ -112,10 +130,8 @@
             </div>
         </section>
 
-        <section id="experience" class="section"><a href="experience.html" class="animated-button"></a>
+        <section id="experience" class="section">
             <h2>Experience </h2>
-            <a href="experience.html" class="animated-button">Experience</a>
-
             <p><strong>Operation Executive</strong><br>
             Ewour Waste Management | Dec 2024 – Present | Noida, Uttar Pradesh, India<br>
             Managing compliance for EPR regulations, including licensing, permit applications, and data management for waste management, plastics, and electronics.</p>
@@ -153,18 +169,41 @@
 
     <footer>
         <div>
-            <a href="https://www.linkedin.com/in/ashwani-kumar" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ashwani-github" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/12ashwani" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
         <p>&copy; 2025 Ashwani Kumar. All rights reserved.</p>
     </footer>
 
+    <!-- Typed.js for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        // Animate skill bars
+        var typed = new Typed("#typed-role", {
+            strings: ["Data Analyst", "Machine Learning Engineer", "Business Intelligence Enthusiast"],
+            typeSpeed: 70,
+            backSpeed: 40,
+            loop: true
+        });
+
+        // Scroll reveal + skill bar animation
+        const sections = document.querySelectorAll('.section');
+        const skills = document.querySelectorAll('.skill-progress');
+
         window.addEventListener('scroll', () => {
-            document.querySelectorAll('.skill-progress').forEach(el => {
-                el.style.width = el.style.width; // Triggers transition
+            const triggerBottom = window.innerHeight * 0.85;
+
+            sections.forEach(sec => {
+                const boxTop = sec.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) sec.classList.add('show');
+            });
+
+            skills.forEach(skill => {
+                const boxTop = skill.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) {
+                    let width = skill.getAttribute('data-width');
+                    skill.style.width = width;
+                }
             });
         });
     </script>
