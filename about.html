@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Ashwani Kumar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">Ashwani Kumar</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-indigo-600">Home</a>
+        <a href="about.html" class="text-indigo-600 font-semibold">About</a>
+        <a href="exp.html" class="hover:text-indigo-600">Experience</a>
+        <a href="projects.html" class="hover:text-indigo-600">Projects</a>
+        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="pt-28 pb-20 px-6 bg-gradient-to-r from-indigo-50 to-purple-100">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Profile Picture -->
+      <div class="flex justify-center" data-sr>
+        <img src="ashwani.png" alt="Ashwani Kumar" class="w-72 h-72 object-cover rounded-2xl shadow-xl border-4 border-indigo-200">
+      </div>
+
+      <!-- About Content -->
+      <div data-sr>
+        <h2 class="text-4xl font-bold text-indigo-700 mb-6">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          I am <span class="font-semibold text-indigo-600">Ashwani Kumar</span>, a passionate 
+          <span class="font-semibold">Data Analyst & Automation Enthusiast</span> with experience in
+          <span class="text-indigo-600">data management, machine learning, automation, and compliance operations</span>.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          I specialize in managing large datasets, building automation tools, and developing 
+          AI/ML models that transform raw data into actionable insights. 
+          With expertise in <span class="font-semibold">Python, SQL, Excel, Google Sheets, Tableau</span>,
+          I combine technical skills with business acumen to create real impact.
+        </p>
+
+        <!-- Skills -->
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Skills & Tools</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-700">
+          <li>✅ Python (Pandas, Scikit-learn)</li>
+          <li>✅ SQL & MySQL</li>
+          <li>✅ Excel & Google Sheets Automation</li>
+          <li>✅ Tableau / BI Dashboards</li>
+          <li>✅ NLP & Machine Learning</li>
+          <li>✅ Compliance & Data Management</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
+    © 2025 Ashwani Kumar. All rights reserved.
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script>
+    ScrollReveal().reveal('[data-sr]', {
+      distance: '40px',
+      duration: 1000,
+      easing: 'ease-out',
+      origin: 'bottom',
+      interval: 200
+    });
+  </script>
+
+</body>
+</html>
