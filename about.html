@@ -4,148 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Ashwani Kumar</title>
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- ScrollReveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
+
   <style>
-    /* Smooth fade-in animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* === PREMIUM BACKGROUND GRADIENT === */
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
     }
 
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
+    /* === GLASSMORPHIC NAVBAR (RICH NAVY) === */
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
-    /* Floating glowing gradient background */
-    body::before {
-      content: "";
-      position: fixed;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 30%, rgba(99,102,241,0.15), transparent 70%),
-                  radial-gradient(circle at 70% 70%, rgba(168,85,247,0.15), transparent 70%);
-      z-index: -1;
-      animation: gradientMove 10s ease-in-out infinite alternate;
+    .nav-link {
+      color: #cbd5e1;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
     }
 
-    @keyframes gradientMove {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(20px, 20px); }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #fbbf24;
+      transition: width 0.3s ease;
     }
 
-    /* Button hover glow */
-    .btn-glow:hover {
-      box-shadow: 0 0 20px rgba(99,102,241,0.6);
-      transform: translateY(-2px);
+    .nav-link:hover, .nav-link.active {
+      color: #fbbf24;
     }
 
-    /* Skill hover animation */
-    .skill-item {
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* === PROFILE IMAGE GLOW === */
+    .profile-img {
+      border: 6px solid #1e293b;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      transition: all 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: translateY(-10px);
+      border-color: #fbbf24;
+      box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3);
+    }
+
+    /* === SKILL TAGS (GOLD ACCENT) === */
+    .skill-tag {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 1px solid rgba(251, 191, 36, 0.3);
       transition: all 0.3s ease;
     }
 
-    .skill-item:hover {
-      transform: translateY(-5px);
-      color: #4f46e5;
-      font-weight: 600;
+    .skill-tag:hover {
+      background: #fbbf24;
+      color: #1e293b;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(251, 191, 36, 0.3);
+    }
+
+    /* === CTA BUTTON (GOLD GRADIENT) === */
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color: #1e293b;
+      padding: 0.8rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(251, 191, 36, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #d97706, #f59e0b);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(251, 191, 36, 0.4);
+    }
+
+    /* === FOOTER (DEEP CHARCOAL + GOLD) === */
+    .footer-bg {
+      background: #8f7cdc;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    /* === FADE IN === */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full top-0 z-50 border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center">
-      <h1 class="text-2xl font-extrabold text-indigo-600 tracking-wide">Ashwani Kumar</h1>
-      <div class="space-x-6 text-gray-700 font-medium">
-        <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
-        <a href="about.html" class="text-indigo-600 font-semibold">About</a>
-        <a href="exp.html" class="hover:text-indigo-600 transition">Experience</a>
-        <a href="projects.html" class="hover:text-indigo-600 transition">Projects</a>
-        <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
+  <!-- NAVBAR (RICH NAVY GLASS) -->
+  <nav class="glass-nav fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-amber-400 tracking-wider">Ashwani Kumar</h1>
+      <div class="space-x-8 text-sm font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="exp.html" class="nav-link">Experience</a>
+        <a href="edu.html" class="nav-link">Education</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- About Section -->
-  <section class="pt-32 pb-20 px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 fade-in">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <!-- ABOUT SECTION -->
+  <section class="pt-32 pb-24 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center text-slate-300">
 
-      <!-- Profile Picture -->
-      <div class="flex justify-center" data-sr>
-        <div class="relative group">
-          <img src="ashwani.png" alt="Ashwani Kumar"
-            class="w-72 h-72 object-cover rounded-3xl shadow-2xl border-4 border-indigo-100 transition-transform transform group-hover:scale-105 duration-500" />
-          <div
-            class="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition duration-500">
-          </div>
-        </div>
+      <!-- PROFILE IMAGE -->
+      <div class="flex justify-center">
+        <img src="images/ashwani.png" alt="Ashwani Kumar"
+          class="w-80 h-80 object-cover rounded-2xl profile-img" />
       </div>
 
-      <!-- About Content -->
-      <div data-sr>
-        <h2 class="text-5xl font-extrabold text-indigo-700 mb-6">About Me</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-5">
-          I’m <span class="font-semibold text-indigo-600">Ashwani Kumar</span>, an
-          <span class="font-semibold">Operations & Data Management Specialist</span> with a growing expertise in
-          <span class="text-indigo-600">Data Analytics, Automation, and Reporting</span>. My journey bridges the gap
-          between operational efficiency and data-driven decision making.
-        </p>
+      <!-- CONTENT -->
+      <div class="space-y-7">
+        <div class="fade-in">
+          <h2 class="text-5xl md:text-6xl font-extrabold text-amber-400">
+            About Me
+          </h2>
+        </div>
 
-        <p class="text-lg text-gray-700 leading-relaxed mb-5">
-          At <span class="font-semibold">Ewour Waste Management</span>, I handle large-scale datasets for
-          <span class="font-semibold">EPR Compliance (Plastic, Battery, and e-Waste)</span>—ensuring
-          data accuracy, automation of reports, and smooth coordination across regulatory operations.
-          I’m also proficient in <span class="font-semibold">Excel, SQL, Power BI, and Python</span>,
-          using them to convert data into meaningful insights.
-        </p>
+        <div class="space-y-5 text-lg leading-relaxed fade-in">
+          <p>
+            Hi, I’m <span class="font-bold text-amber-300">Ashwani Kumar</span> — a
+            <span class="font-bold">Data & Operations Specialist</span>
+            who turns complex datasets into clear, actionable results.
+          </p>
 
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">
-          I aim to advance into a dynamic role as a
-          <span class="font-semibold text-indigo-600">Data Analyst / Data Management Professional</span>,
-          where I can leverage my analytical and automation skills to improve efficiency, accuracy, and data governance.
-        </p>
+          <p>
+            At <span class="font-semibold">Ewour Waste Management</span>, I manage
+            <span class="font-semibold">EPR Compliance</span> for Plastic, Battery & e-Waste —
+            automating reports, ensuring accuracy, and streamlining regulatory processes.
+          </p>
 
-        <!-- Skills -->
-        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Core Skills & Tools</h3>
-        <ul class="grid grid-cols-2 gap-3 text-gray-700">
-          <li class="skill-item">✅ Advanced Excel & Google Sheets Automation</li>
-          <li class="skill-item">✅ SQL & MySQL Database Management</li>
-          <li class="skill-item">✅ Power BI & Tableau Dashboards</li>
-          <li class="skill-item">✅ Python (Pandas, NumPy, Matplotlib)</li>
-          <li class="skill-item">✅ Data Cleaning & Validation</li>
-          <li class="skill-item">✅ EPR Compliance & Regulatory Documentation</li>
-        </ul>
+          <p>
+            Expert in <span class="font-semibold text-amber-300">Excel, SQL, Power BI, Python</span>,
+            I build dashboards, automate workflows, and deliver insights that drive impact.
+          </p>
 
-        <div class="mt-8">
-          <a href="projects.html"
-            class="btn-glow bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md">
-            View My Work →
+          <p class="text-xl font-medium text-amber-300">
+            Ready for a <span class="underline decoration-amber-500">Data Analyst / Manager</span> role
+            to scale efficiency with smart analytics.
+          </p>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="fade-in">
+          <h3 class="text-2xl font-bold text-amber-400 mb-4">Core Skills</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-tag">Advanced Excel</span>
+            <span class="skill-tag">SQL & MySQL</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Data Automation</span>
+            <span class="skill-tag">EPR Compliance</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="fade-in pt-4">
+          <a href="projects.html" class="btn-primary inline-block">
+            View My Projects →
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm border-t border-gray-200">
-    © 2025 Ashwani Kumar — Crafted with 💙 using Tailwind CSS
+  <!-- FOOTER (DEEP CHARCOAL + GOLD) -->
+  <footer class="footer-bg py-8 border-t">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+      <p class="text-slate-400">
+        © 2025 <span class="font-bold text-amber-400">Ashwani Kumar</span>.
+        <span class="text-amber-300">Crafted with precision & passion.</span>
+      </p>
+    </div>
   </footer>
 
-  <!-- Scroll Reveal Animations -->
+  <!-- FADE-IN ON SCROLL -->
   <script>
-    ScrollReveal().reveal('[data-sr]', {
-      distance: '40px',
-      duration: 1000,
-      easing: 'ease-out',
-      origin: 'bottom',
-      interval: 200
-    });
-  </script>
+    const fadeElems = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
+    fadeElems.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
