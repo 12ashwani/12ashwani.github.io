@@ -4,83 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP Projects</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
             color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling */
         }
+
         header {
-            background-color: #95b1ce;
-            color: #141010;
-            padding: 20px 0;
+            background: linear-gradient(90deg, #0073e6, #00bcd4);
+            color: white;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for header */
+            padding: 40px 0;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
         nav a {
             margin: 0 15px;
-            color: #fb0808;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s; /* Smooth color transition */
+            transition: color 0.3s, transform 0.3s;
         }
+
         nav a:hover {
-            color: #0073e6; /* Change color on hover */
+            color: #ffff66;
+            transform: translateY(-3px);
         }
+
+        section#projects {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
         h2 {
             color: #0073e6;
-            text-align: center;
-            margin-top: 20px;
+            border-bottom: 3px solid #00bcd4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
         }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
         ul {
             list-style-type: none;
-            padding: 0;
-            max-width: 800px;
-            margin: 20px auto;
+            margin-top: 20px;
         }
+
         ul li {
-            background-color: #d2e1f1;
-            margin: 10px 0;
-            padding: 15px;
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 20px;
             border-radius: 8px;
-            transition: transform 0.2s; /* Smooth scale effect */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         ul li:hover {
-            transform: scale(1.02); /* Scale up on hover */
+            background-color: #0073e6;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 115, 230, 0.3);
+            color: white;
         }
+
         ul li a {
+            color: #0073e6;
             text-decoration: none;
-            color: #0e11bc;
             font-weight: bold;
+            transition: color 0.3s;
         }
-        ul li a:hover {
-            text-decoration: underline;
+
+        ul li:hover a {
+            color: white;
         }
+
         footer {
             text-align: center;
-            padding: 15px 0;
-            background-color: #c6ddf4;
-            color: #ea0f0f;
-            margin-top: 20px;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Subtle shadow for footer */
+            padding: 30px;
+            background: linear-gradient(90deg, #00bcd4, #0073e6);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
         }
-        button {
+
+        footer a {
+            color: #ffff66;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #0073e6;
+        }
+
+        /* Scroll Buttons */
+        .scroll-btn {
             position: fixed;
-            bottom: 30px;
             right: 30px;
             background-color: #0073e6;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             padding: 10px 15px;
             cursor: pointer;
-            transition: background-color 0.3s; /* Smooth background transition */
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
-        button:hover {
-            background-color: #005bb5; /* Darker shade on hover */
+
+        .scroll-btn:hover {
+            background-color: #005bb5;
+            transform: translateY(-3px);
+        }
+
+        #scrollToTopBtn {
+            bottom: 80px;
+        }
+
+        #scrollToBottomBtn {
+            bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            section#projects {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -88,57 +176,44 @@
     <header>
         <h1>NLP Projects</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Excel.html">Excel Projects</a>
-            <a href="tableau.html">Tableau Projects</a>
-            <a href="ml.html">Machine Learning Projects</a>
-            <a href="nlp.html">NLP Projects</a>
+            <a href="../projects.html" aria-label="Navigate to Project Gallery">All Projects</a>
+            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
+            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
+            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
+            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
         </nav>
     </header>
-    
+
     <section id="projects">
-        <h2>Natural Language Processing (NLP)</h2>
-        <p style="text-align:center; max-width:800px; margin: 0 auto;">
-            Explore my NLP projects where I've applied advanced natural language processing techniques to solve real-world problems. From sentiment analysis to text classification, these projects highlight my ability to preprocess and analyze text data, build and fine-tune NLP models, and deploy solutions using tools such as NLTK, spaCy, and Transformers.
+        <h2>My NLP Projects</h2>
+        <p>
+            Explore my Natural Language Processing projects where I apply advanced text analytics and machine learning
+            techniques to extract insights from textual data. These include sentiment analysis, chatbot development,
+            and named entity recognition using tools such as NLTK, spaCy, and Transformers.
         </p>
+
         <ul>
-            <li>
-                <a href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank">Sentiment Analysis of Social Media Posts</a><br>
-                Analyzed sentiment of social media posts using NLP techniques to understand public opinion on various topics.
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Text-Classification" target="_blank">Text Classification for Customer Support</a><br>
-                Built a text classification model to categorize customer support queries, improving response efficiency.
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank">Named Entity Recognition for Financial Data</a><br>
-                Implemented Named Entity Recognition to extract important entities from financial documents, aiding in data analysis.
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Chatbot" target="_blank">Chatbot for Customer Service</a><br>
-                Developed a chatbot to automate customer service interactions, enhancing customer experience and reducing response times.
-            </li>
+            <li><a href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank">1. Sentiment Analysis of Social Media Posts</a></li>
+            <li><a href="https://github.com/12ashwani/Text-Classification" target="_blank">2. Text Classification for Customer Support</a></li>
+            <li><a href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank">3. Named Entity Recognition for Financial Data</a></li>
+            <li><a href="https://github.com/12ashwani/Chatbot" target="_blank">4. Chatbot for Customer Service</a></li>
         </ul>
     </section>
-    
+
     <footer>
         <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
-        <p>Explore more projects on <a href="https://github.com/12ashwani" target="_blank">GitHub</a></p>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" aria-label="View my LinkedIn profile">View on LinkedIn</a>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" title="Go to top" onclick="scrollToTop()">Top</button>
-
-    <!-- Scroll to Bottom Button -->
-    <button id="scrollToBottomBtn" title="Go to bottom" onclick="scrollToBottom()">Bottom</button>
+    <!-- Scroll Buttons -->
 
     <script>
-        // Scroll to Top function
+        // Scroll to Top
         function scrollToTop() {
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        // Scroll to Bottom function
+        // Scroll to Bottom
         function scrollToBottom() {
             window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
         }

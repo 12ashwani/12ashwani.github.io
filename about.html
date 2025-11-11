@@ -1,72 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Ashwani Kumar</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    /* Smooth fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Floating glowing gradient background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(99,102,241,0.15), transparent 70%),
+                  radial-gradient(circle at 70% 70%, rgba(168,85,247,0.15), transparent 70%);
+      z-index: -1;
+      animation: gradientMove 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes gradientMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(20px, 20px); }
+    }
+
+    /* Button hover glow */
+    .btn-glow:hover {
+      box-shadow: 0 0 20px rgba(99,102,241,0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Skill hover animation */
+    .skill-item {
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+      color: #4f46e5;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-indigo-600">Ashwani Kumar</h1>
-      <div class="space-x-6">
-        <a href="index.html" class="hover:text-indigo-600">Home</a>
+  <nav class="bg-white/80 backdrop-blur-md shadow-md fixed w-full top-0 z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-indigo-600 tracking-wide">Ashwani Kumar</h1>
+      <div class="space-x-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-indigo-600 transition">Home</a>
         <a href="about.html" class="text-indigo-600 font-semibold">About</a>
-        <a href="exp.html" class="hover:text-indigo-600">Experience</a>
-        <a href="projects.html" class="hover:text-indigo-600">Projects</a>
-        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+        <a href="exp.html" class="hover:text-indigo-600 transition">Experience</a>
+        <a href="projects.html" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- About Section -->
-  <section class="pt-28 pb-20 px-6 bg-gradient-to-r from-indigo-50 to-purple-100">
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 fade-in">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
       <!-- Profile Picture -->
       <div class="flex justify-center" data-sr>
-        <img src="ashwani.png" alt="Ashwani Kumar" class="w-72 h-72 object-cover rounded-2xl shadow-xl border-4 border-indigo-200">
+        <div class="relative group">
+          <img src="ashwani.png" alt="Ashwani Kumar"
+            class="w-72 h-72 object-cover rounded-3xl shadow-2xl border-4 border-indigo-100 transition-transform transform group-hover:scale-105 duration-500" />
+          <div
+            class="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-20 transition duration-500">
+          </div>
+        </div>
       </div>
 
       <!-- About Content -->
       <div data-sr>
-        <h2 class="text-4xl font-bold text-indigo-700 mb-6">About Me</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          I am <span class="font-semibold text-indigo-600">Ashwani Kumar</span>, a passionate 
-          <span class="font-semibold">Data Analyst & Automation Enthusiast</span> with experience in
-          <span class="text-indigo-600">data management, machine learning, automation, and compliance operations</span>.
+        <h2 class="text-5xl font-extrabold text-indigo-700 mb-6">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-5">
+          I’m <span class="font-semibold text-indigo-600">Ashwani Kumar</span>, an
+          <span class="font-semibold">Operations & Data Management Specialist</span> with a growing expertise in
+          <span class="text-indigo-600">Data Analytics, Automation, and Reporting</span>. My journey bridges the gap
+          between operational efficiency and data-driven decision making.
         </p>
-        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          I specialize in managing large datasets, building automation tools, and developing 
-          AI/ML models that transform raw data into actionable insights. 
-          With expertise in <span class="font-semibold">Python, SQL, Excel, Google Sheets, Tableau</span>,
-          I combine technical skills with business acumen to create real impact.
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-5">
+          At <span class="font-semibold">Ewour Waste Management</span>, I handle large-scale datasets for
+          <span class="font-semibold">EPR Compliance (Plastic, Battery, and e-Waste)</span>—ensuring
+          data accuracy, automation of reports, and smooth coordination across regulatory operations.
+          I’m also proficient in <span class="font-semibold">Excel, SQL, Power BI, and Python</span>,
+          using them to convert data into meaningful insights.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          I aim to advance into a dynamic role as a
+          <span class="font-semibold text-indigo-600">Data Analyst / Data Management Professional</span>,
+          where I can leverage my analytical and automation skills to improve efficiency, accuracy, and data governance.
         </p>
 
         <!-- Skills -->
-        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Skills & Tools</h3>
+        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Core Skills & Tools</h3>
         <ul class="grid grid-cols-2 gap-3 text-gray-700">
-          <li>✅ Python (Pandas, Scikit-learn)</li>
-          <li>✅ SQL & MySQL</li>
-          <li>✅ Excel & Google Sheets Automation</li>
-          <li>✅ Tableau / BI Dashboards</li>
-          <li>✅ NLP & Machine Learning</li>
-          <li>✅ Compliance & Data Management</li>
+          <li class="skill-item">✅ Advanced Excel & Google Sheets Automation</li>
+          <li class="skill-item">✅ SQL & MySQL Database Management</li>
+          <li class="skill-item">✅ Power BI & Tableau Dashboards</li>
+          <li class="skill-item">✅ Python (Pandas, NumPy, Matplotlib)</li>
+          <li class="skill-item">✅ Data Cleaning & Validation</li>
+          <li class="skill-item">✅ EPR Compliance & Regulatory Documentation</li>
         </ul>
+
+        <div class="mt-8">
+          <a href="projects.html"
+            class="btn-glow bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all shadow-md">
+            View My Work →
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
-    © 2025 Ashwani Kumar. All rights reserved.
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm border-t border-gray-200">
+    © 2025 Ashwani Kumar — Crafted with 💙 using Tailwind CSS
   </footer>
 
-  <!-- Scroll Reveal -->
+  <!-- Scroll Reveal Animations -->
   <script>
     ScrollReveal().reveal('[data-sr]', {
       distance: '40px',

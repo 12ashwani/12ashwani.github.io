@@ -25,70 +25,27 @@
             padding: 40px 0;
             width: 100%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
         }
 
         header h1 {
             font-size: 2.5rem;
-            animation: fadeIn 2s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Navigation Menu */
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        nav {
             margin-top: 20px;
         }
 
-        /* Dropdown Button (≡) */
-        .menu-icon {
-            font-size: 2rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: white;
-            padding: 10px;
-        }
-
-        /* Dropdown Menu */
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: none;
-            flex-direction: column;
-            width: 200px;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .dropdown-menu a {
-            padding: 12px;
+        nav a {
+            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
-            color: #ff4500;
             font-weight: bold;
-            display: block;
-            transition: background 0.3s, color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
-        .dropdown-menu a:hover {
-            background-color: #ff4500;
-            color: white;
-        }
-
-        /* Show Dropdown on Hover */
-        .nav-container:hover .dropdown-menu {
-            display: flex;
+        nav a:hover {
+            color: #ffff66;
+            transform: translateY(-3px);
         }
 
         section#projects {
@@ -108,6 +65,12 @@
             margin-bottom: 20px;
             font-size: 2rem;
             text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
         }
 
         ul {
@@ -166,9 +129,16 @@
             header h1 {
                 font-size: 2rem;
             }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
             section#projects {
                 padding: 20px;
             }
+
             h2 {
                 font-size: 1.5rem;
             }
@@ -178,41 +148,34 @@
 <body>
     <header>
         <h1>Machine Learning Projects</h1>
-        
-        <!-- Navigation Menu -->
-        <div class="nav-container">
-            <button class="menu-icon">≡</button>
-            <div class="dropdown-menu">
-                <a href="index.html">Home</a>
-                <a href="Excel.html">Excel Projects</a>
-                <a href="tableau.html">Tableau Projects</a>
-                <a href="ml.html">Machine Learning Projects</a>
-                <a href="nlp.html">NLP Projects</a>
-            </div>
-        </div>
+        <nav>
+            <a href="../projects.html" aria-label="Navigate to Project Gallery">All Projects</a>
+            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
+            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
+            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
+            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
+        </nav>
     </header>
 
     <section id="projects">
         <h2>My Machine Learning Projects</h2>
+        <p>
+            Explore my collection of Machine Learning projects where I apply supervised and unsupervised learning techniques 
+            to solve real-world business problems. These projects involve data preprocessing, model training, and 
+            performance optimization using algorithms like Logistic Regression, Decision Trees, Random Forest, and more.
+        </p>
+
         <ul>
-            <li>
-                <a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank">1 Loan Repayment Assessment in Banking</a>
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/E-comerc-product_category" target="_blank">2 E-commerce Product Categorization</a>
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank">3 Credit Card Fraud Detection</a>
-            </li>
-            <li>
-                <a href="https://github.com/12ashwani/student_ml" target="_blank">4 Student Performance Prediction</a>
-            </li>
+            <li><a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank">1. Loan Repayment Assessment in Banking</a></li>
+            <li><a href="https://github.com/12ashwani/E-comerc-product_category" target="_blank">2. E-commerce Product Categorization</a></li>
+            <li><a href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank">3. Credit Card Fraud Detection</a></li>
+            <li><a href="https://github.com/12ashwani/student_ml" target="_blank">4. Student Performance Prediction</a></li>
         </ul>
     </section>
 
     <footer>
-        <p>Contact me: kumarashwani1208@gmail.com | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank">View on LinkedIn</a>
+        <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" aria-label="View my LinkedIn profile">View on LinkedIn</a>
     </footer>
 </body>
 </html>
