@@ -1,138 +1,130 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Ashwani Kumar</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://kit.fontawesome.com/a2d9d6c1d6.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Ashwani Kumar</title>
+  <meta name="description" content="Project portfolio of Ashwani Kumar across Excel, Tableau, ML, NLP, and automation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gradient-to-r from-gray-50 via-indigo-50 to-purple-50 text-gray-900 font-sans">
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-indigo-600">Ashwani Kumar</h1>
-      <div class="space-x-6">
-        <a href="index.html" class="hover:text-indigo-600">Home</a>
-        <a href="about.html" class="hover:text-indigo-600">About</a>
-        <a href="exp.html" class="hover:text-indigo-600">Experience</a>
-        <a href="edu.html" class="hover:text-indigo-600">Education</a>
-        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="exp.html">Experience</a>
+        <a class="nav-link" href="edu.html">Education</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Header -->
-  <section class="pt-28 pb-16 px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-indigo-700 drop-shadow-md" data-sr>
-      Tools & Technologies I Work With ⚡
-    </h2>
-    <p class="text-lg text-gray-700 mt-4 max-w-2xl mx-auto" data-sr>
-      My projects span across multiple tools and technologies.  
-      Below are the platforms I use to analyze, visualize, automate, and streamline operations.
-    </p>
-  </section>
-
-  <!-- Tools Overview -->
-  <section class="px-6 pb-20">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-      <!-- Excel -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-file-excel text-green-600 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-green-700">Excel</h3>
-        <p class="mt-3 text-gray-700">
-          Built multiple projects in Excel for sales analysis, reporting,  
-          and uncovering trends. Used pivot tables, formulas, and charts  
-          to extract actionable insights from raw data.
+  <main id="main-content">
+    <div class="container">
+      <section class="hero-card reveal">
+        <span class="hero-kicker">Projects</span>
+        <h1>Tools and technologies I use</h1>
+        <p class="section-lead">
+          This portfolio spans analytics, machine learning, and workflow automation. Each category page contains focused project examples,
+          methods, and links to repositories or demos.
         </p>
-        <a href="pp/Excel.html" class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition">View Projects</a>
-      </div>
+      </section>
 
-      <!-- Tableau -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-chart-pie text-indigo-600 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-indigo-700">Tableau</h3>
-        <p class="mt-3 text-gray-700">
-          Designed BI dashboards for customer churn analysis, sales insights,  
-          and business KPIs. Focused on interactive storytelling with data  
-          to support decision-making.
-        </p>
-        <a href="pp/tableau.html" class="mt-5 inline-block px-5 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">View Projects</a>
-      </div>
+      <section class="section reveal">
+        <h2 class="section-title">Best Project from My GitHub</h2>
+        <article class="card">
+          <h3>Intelligent-CRM-with-Invoice-Engine</h3>
+          <p>
+            An AI-powered CRM project that unifies lead tracking, invoice generation, payment records, and a local assistant
+            for natural-language CRM insights. It reflects real business workflow automation from end to end.
+          </p>
+          <ul class="clean-list">
+            <li>CRM data workflow for leads and payment tracking</li>
+            <li>Flask invoice system with GST-ready invoice generation</li>
+            <li>Local AI assistant for CRM queries and reports</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="https://github.com/12ashwani/Intelligent-CRM-with-Invoice-Engine" target="_blank" rel="noopener noreferrer">Open Repository</a>
+            <a class="btn-ghost" href="pp/invoice.html">Portfolio Details</a>
+          </div>
+        </article>
+      </section>
 
-      <!-- Python & ML -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-brain text-purple-600 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-purple-700">Python & Machine Learning</h3>
-        <p class="mt-3 text-gray-700">
-          Created predictive models for loan approvals and financial analysis.  
-          Applied ML algorithms using Pandas, Scikit-learn, and Matplotlib  
-          to generate accurate forecasts and insights.
-        </p>
-        <a href="pp/ml.html" class="mt-5 inline-block px-5 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition">View Projects</a>
-      </div>
+      <section class="section reveal">
+        <h2 class="section-title">Project Categories</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Excel</h3>
+            <p>Sales analysis, forecasting, and reporting models with pivot logic and dashboard views.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/Excel.html">Open Category</a>
+            </div>
+          </article>
 
-      <!-- NLP -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-language text-pink-600 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-pink-700">Natural Language Processing</h3>
-        <p class="mt-3 text-gray-700">
-          Worked on sentiment analysis and text classification projects.  
-          Used Python NLP libraries to analyze tweets, reviews, and  
-          insurance documents for extracting meaningful patterns.
-        </p>
-        <a href="pp/nlp.html" class="mt-5 inline-block px-5 py-2 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 transition">View Projects</a>
-      </div>
+          <article class="card">
+            <h3>Tableau</h3>
+            <p>Interactive visual stories and KPI dashboards designed for business decision support.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/tableau.html">Open Category</a>
+            </div>
+          </article>
 
-      <!-- Automation (Invoice Generator) -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-cogs text-yellow-500 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-yellow-600">AI projects</h3>
-        <p class="mt-3 text-gray-700">
-          Designed a system that fetches client details from a database/Excel and auto-generates PDF invoices.
+          <article class="card">
+            <h3>Python and Machine Learning</h3>
+            <p>Predictive models for repayment, fraud, categorization, and performance analysis.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/ml.html">Open Category</a>
+            </div>
+          </article>
 
-          Enhanced with AI rules to auto-detect missing fields and suggest corrections.
+          <article class="card">
+            <h3>Natural Language Processing</h3>
+            <p>Sentiment and classification workflows using common NLP libraries and model pipelines.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/nlp.html">Open Category</a>
+            </div>
+          </article>
 
-          Tools & Tech: Python, ReportLab, Pandas
+          <article class="card">
+            <h3>Invoice Automation</h3>
+            <p>Automation of invoice generation using structured data inputs and rule-based checks.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/invoice.html">Open Category</a>
+            </div>
+          </article>
 
-          Reduced manual invoice creation time by 70%.
-        </p>
-        <a href="pp/invoice.html" class="mt-5 inline-block px-5 py-2 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition">View Projects</a>
-      </div>
-
-      <!-- Automation (Google Sheets + Forms) -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition" data-sr>
-        <i class="fas fa-table text-green-500 text-4xl mb-4"></i>
-        <h3 class="text-2xl font-bold text-green-600">Google Sheets Automation</h3>
-        <p class="mt-3 text-gray-700">
-          Developed a complete automation tool using Google Sheets & Forms  
-          to track operations, monitor sales, and assign projects dynamically  
-          based on employee requirements. Enhanced workflow efficiency  
-          and team collaboration with zero-code automation.
-        </p>
-        <a href="pp/sheets-automation.html" class="mt-5 inline-block px-5 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition">View Project</a>
-      </div>
-
+          <article class="card">
+            <h3>Google Sheets Automation</h3>
+            <p>Operational trackers, assignment logic, and no-code workflows for daily process execution.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="pp/sheets-automation.html">Open Category</a>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-white py-6 text-center text-gray-600 text-sm shadow-inner">
-    © 2025 Ashwani Kumar. All rights reserved.
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        |
+        <a href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
+    </div>
   </footer>
 
-  <!-- Scroll Reveal -->
-  <script>
-    ScrollReveal().reveal('[data-sr]', {
-      distance: '50px',
-      duration: 1200,
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      interval: 200
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

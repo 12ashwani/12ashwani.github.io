@@ -1,222 +1,87 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NLP Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(90deg, #0073e6, #00bcd4);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffff66;
-            transform: translateY(-3px);
-        }
-
-        section#projects {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #0073e6;
-            border-bottom: 3px solid #00bcd4;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
-
-        p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        ul {
-            list-style-type: none;
-            margin-top: 20px;
-        }
-
-        ul li {
-            background-color: #fff;
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        ul li:hover {
-            background-color: #0073e6;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 115, 230, 0.3);
-            color: white;
-        }
-
-        ul li a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        ul li:hover a {
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(90deg, #00bcd4, #0073e6);
-            color: white;
-            margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        footer a {
-            color: #ffff66;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #0073e6;
-        }
-
-        /* Scroll Buttons */
-        .scroll-btn {
-            position: fixed;
-            right: 30px;
-            background-color: #0073e6;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .scroll-btn:hover {
-            background-color: #005bb5;
-            transform: translateY(-3px);
-        }
-
-        #scrollToTopBtn {
-            bottom: 80px;
-        }
-
-        #scrollToBottomBtn {
-            bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9rem;
-            }
-
-            section#projects {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLP Projects | Ashwani Kumar</title>
+  <meta name="description" content="Natural language processing projects by Ashwani Kumar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-    <header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../exp.html">Experience</a>
+        <a class="nav-link" href="../edu.html">Education</a>
+        <a class="nav-link active" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="hero-card reveal">
+        <span class="hero-kicker">Project Category</span>
         <h1>NLP Projects</h1>
-        <nav>
-            <a href="../projects.html" aria-label="Navigate to Project Gallery">All Projects</a>
-            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
-            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
-            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
-            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
-        </nav>
-    </header>
-
-    <section id="projects">
-        <h2>My NLP Projects</h2>
-        <p>
-            Explore my Natural Language Processing projects where I apply advanced text analytics and machine learning
-            techniques to extract insights from textual data. These include sentiment analysis, chatbot development,
-            and named entity recognition using tools such as NLTK, spaCy, and Transformers.
+        <p class="section-lead">
+          Natural language processing projects focused on text understanding, sentiment evaluation,
+          and classification for customer and business use cases.
         </p>
+        <div class="inline-links">
+          <a class="btn-ghost" href="Excel.html">Excel</a>
+          <a class="btn-ghost" href="tableau.html">Tableau</a>
+          <a class="btn-ghost" href="ml.html">Machine Learning</a>
+          <a class="btn-ghost" href="nlp.html">NLP</a>
+          <a class="btn-ghost" href="invoice.html">Invoice Automation</a>
+          <a class="btn-ghost" href="sheets-automation.html">Sheets Automation</a>
+        </div>
+      </section>
 
-        <ul>
-            <li><a href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank">1. Sentiment Analysis of Social Media Posts</a></li>
-            <li><a href="https://github.com/12ashwani/Text-Classification" target="_blank">2. Text Classification for Customer Support</a></li>
-            <li><a href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank">3. Named Entity Recognition for Financial Data</a></li>
-            <li><a href="https://github.com/12ashwani/Chatbot" target="_blank">4. Chatbot for Customer Service</a></li>
+      <section class="section reveal">
+        <h2 class="section-title">Featured Work</h2>
+        <ul class="project-list">
+          <li class="project-item">
+            <h3>Sentiment Analysis of Social Media Posts</h3>
+            <p>Polarity detection pipeline for large text sets and trend-level interpretation.</p>
+            <a class="btn" href="https://github.com/12ashwani/Sentiment-Analysis" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>Text Classification for Customer Support</h3>
+            <p>Automated categorization of incoming queries to improve response routing.</p>
+            <a class="btn" href="https://github.com/12ashwani/Text-Classification" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>Named Entity Recognition for Financial Data</h3>
+            <p>Entity extraction pipeline to structure financial text for downstream analysis.</p>
+            <a class="btn" href="https://github.com/12ashwani/Named-Entity-Recognition" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>Chatbot for Customer Service</h3>
+            <p>Conversation workflow for common customer intents and guided query resolution.</p>
+            <a class="btn" href="https://github.com/12ashwani/Chatbot" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
         </ul>
-    </section>
+      </section>
+    </div>
+  </main>
 
-    <footer>
-        <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" aria-label="View my LinkedIn profile">View on LinkedIn</a>
-    </footer>
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span><a href="../projects.html">Back to all project categories</a></span>
+    </div>
+  </footer>
 
-    <!-- Scroll Buttons -->
-
-    <script>
-        // Scroll to Top
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-
-        // Scroll to Bottom
-        function scrollToBottom() {
-            window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-        }
-    </script>
+  <script src="../scripts.js"></script>
 </body>
 </html>

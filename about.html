@@ -1,234 +1,101 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me - Ashwani Kumar</title>
-
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-
-  <!-- ScrollReveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <style>
-    /* === PREMIUM BACKGROUND GRADIENT === */
-    body {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-      color: #e2e8f0;
-      min-height: 100vh;
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* === GLASSMORPHIC NAVBAR (RICH NAVY) === */
-    .glass-nav {
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-link {
-      color: #cbd5e1;
-      font-weight: 500;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #fbbf24;
-      transition: width 0.3s ease;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: #fbbf24;
-    }
-
-    .nav-link:hover::after, .nav-link.active::after {
-      width: 100%;
-    }
-
-    /* === PROFILE IMAGE GLOW === */
-    .profile-img {
-      border: 6px solid #1e293b;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-      transition: all 0.4s ease;
-    }
-
-    .profile-img:hover {
-      transform: translateY(-10px);
-      border-color: #fbbf24;
-      box-shadow: 0 25px 50px rgba(251, 191, 36, 0.3);
-    }
-
-    /* === SKILL TAGS (GOLD ACCENT) === */
-    .skill-tag {
-      background: rgba(251, 191, 36, 0.15);
-      color: #fbbf24;
-      padding: 0.5rem 1.1rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      border: 1px solid rgba(251, 191, 36, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .skill-tag:hover {
-      background: #fbbf24;
-      color: #1e293b;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(251, 191, 36, 0.3);
-    }
-
-    /* === CTA BUTTON (GOLD GRADIENT) === */
-    .btn-primary {
-      background: linear-gradient(135deg, #f59e0b, #fbbf24);
-      color: #1e293b;
-      padding: 0.8rem 2rem;
-      border-radius: 0.5rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(251, 191, 36, 0.3);
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #d97706, #f59e0b);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(251, 191, 36, 0.4);
-    }
-
-    /* === FOOTER (DEEP CHARCOAL + GOLD) === */
-    .footer-bg {
-      background: #8f7cdc;
-      border-top: 1px solid rgba(148, 163, 184, 0.1);
-    }
-
-    /* === FADE IN === */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <title>About | Ashwani Kumar</title>
+  <meta name="description" content="About Ashwani Kumar and his work across data analytics, compliance, and operations improvement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<body class="font-sans">
-
-  <!-- NAVBAR (RICH NAVY GLASS) -->
-  <nav class="glass-nav fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-amber-400 tracking-wider">Ashwani Kumar</h1>
-      <div class="space-x-8 text-sm font-medium">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="exp.html" class="nav-link">Experience</a>
-        <a href="edu.html" class="nav-link">Education</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="exp.html">Experience</a>
+        <a class="nav-link" href="edu.html">Education</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- ABOUT SECTION -->
-  <section class="pt-32 pb-24 px-6">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center text-slate-300">
-
-      <!-- PROFILE IMAGE -->
-      <div class="flex justify-center">
-        <img src="images/ashwani.png" alt="Ashwani Kumar"
-          class="w-80 h-80 object-cover rounded-2xl profile-img" />
-      </div>
-
-      <!-- CONTENT -->
-      <div class="space-y-7">
-        <div class="fade-in">
-          <h2 class="text-5xl md:text-6xl font-extrabold text-amber-400">
-            About Me
-          </h2>
-        </div>
-
-        <div class="space-y-5 text-lg leading-relaxed fade-in">
+  <main id="main-content">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-card reveal">
+          <span class="hero-kicker">About</span>
+          <h1>From operations discipline to analytics impact</h1>
+          <p class="section-lead">
+            I have built my career by solving practical business problems: tracking regulations, handling large documentation cycles,
+            and improving reporting quality. That foundation now powers my transition into full-time analytics roles.
+          </p>
           <p>
-            Hi, I’m <span class="font-bold text-amber-300">Ashwani Kumar</span> — a
-            <span class="font-bold">Data & Operations Specialist</span>
-            who turns complex datasets into clear, actionable results.
+            At Ewour Waste Management, I manage EPR compliance operations for plastic, battery, and e-waste workflows.
+            I focus on data quality, process clarity, and timely submissions while creating reusable reporting systems.
           </p>
-
-          <p>
-            At <span class="font-semibold">Ewour Waste Management</span>, I manage
-            <span class="font-semibold">EPR Compliance</span> for Plastic, Battery & e-Waste —
-            automating reports, ensuring accuracy, and streamlining regulatory processes.
-          </p>
-
-          <p>
-            Expert in <span class="font-semibold text-amber-300">Excel, SQL, Power BI, Python</span>,
-            I build dashboards, automate workflows, and deliver insights that drive impact.
-          </p>
-
-          <p class="text-xl font-medium text-amber-300">
-            Ready for a <span class="underline decoration-amber-500">Data Analyst / Manager</span> role
-            to scale efficiency with smart analytics.
-          </p>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="fade-in">
-          <h3 class="text-2xl font-bold text-amber-400 mb-4">Core Skills</h3>
-          <div class="flex flex-wrap gap-3">
-            <span class="skill-tag">Advanced Excel</span>
-            <span class="skill-tag">SQL & MySQL</span>
-            <span class="skill-tag">Power BI</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Data Automation</span>
-            <span class="skill-tag">EPR Compliance</span>
+          <div class="cta-row">
+            <a class="btn" href="projects.html">See My Work</a>
+            <a class="btn-ghost" href="contact.html">Collaborate</a>
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="fade-in pt-4">
-          <a href="projects.html" class="btn-primary inline-block">
-            View My Projects →
-          </a>
+        <div class="photo-frame reveal">
+          <img src="images/ashwani.png" alt="Ashwani Kumar" />
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- FOOTER (DEEP CHARCOAL + GOLD) -->
-  <footer class="footer-bg py-8 border-t">
-    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-      <p class="text-slate-400">
-        © 2025 <span class="font-bold text-amber-400">Ashwani Kumar</span>.
-        <span class="text-amber-300">Crafted with precision & passion.</span>
-      </p>
+      <section class="section reveal">
+        <h2 class="section-title">Core Strengths</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Business Context</h3>
+            <p>I understand compliance and operations realities, so analysis stays aligned with what teams actually need.</p>
+          </article>
+          <article class="card">
+            <h3>Data Execution</h3>
+            <p>I clean datasets, structure reports, and create dashboards that support day-to-day as well as strategic decisions.</p>
+          </article>
+          <article class="card">
+            <h3>System Thinking</h3>
+            <p>I reduce process friction by automating repetitive tasks and documenting workflows for consistency.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2 class="section-title">Tools I Use</h2>
+        <ul class="pill-list">
+          <li class="pill">Advanced Excel</li>
+          <li class="pill">SQL / MySQL</li>
+          <li class="pill">Power BI</li>
+          <li class="pill">Python</li>
+          <li class="pill">Google Sheets Automation</li>
+          <li class="pill">Regulatory Reporting</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        |
+        <a href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
     </div>
   </footer>
 
-  <!-- FADE-IN ON SCROLL -->
-  <script>
-    const fadeElems = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeElems.forEach(el => observer.observe(el));
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

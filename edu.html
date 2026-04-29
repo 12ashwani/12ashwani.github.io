@@ -1,141 +1,111 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Education - Ashwani Kumar</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    /* Gradient animation for background */
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    body {
-      background: linear-gradient(-45deg, #f0f4ff, #e0f7fa, #fff8e1, #f3e5f5);
-      background-size: 400% 400%;
-      animation: gradientShift 12s ease infinite;
-    }
-    /* Soft glow hover effect for cards */
-    .card-hover:hover {
-      box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
-      transform: translateY(-8px);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education | Ashwani Kumar</title>
+  <meta name="description" content="Education, certifications, and learning journey of Ashwani Kumar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<body class="text-gray-900 font-sans overflow-x-hidden">
-
-  <!-- Navbar -->
-  <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-indigo-100">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-      <h1 class="text-3xl font-extrabold bg-gradient-to-r from-indigo-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent tracking-wide">
-        Ashwani Kumar
-      </h1>
-      <div class="space-x-6 font-medium text-gray-700">
-        <a href="index.html" class="hover:text-indigo-500 transition duration-300">Home</a>
-        <a href="about.html" class="hover:text-indigo-500 transition duration-300">About</a>
-        <a href="exp.html" class="hover:text-indigo-500 transition duration-300">Experience</a>
-        <a href="edu.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-500">Education</a>
-        <a href="projects.html" class="hover:text-indigo-500 transition duration-300">Projects</a>
-        <a href="contact.html" class="hover:text-indigo-500 transition duration-300">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="exp.html">Experience</a>
+        <a class="nav-link active" href="edu.html">Education</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Main Section -->
-  <section class="pt-28 pb-20 px-6">
-    <div class="max-w-5xl mx-auto text-center mb-16">
-      <h2 class="text-6xl font-extrabold bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
-        Education
-      </h2>
-      <p class="text-gray-700 mt-4 text-lg italic">
-        My academic journey, professional certifications, and lifelong learning milestones.
-      </p>
-    </div>
+  <main id="main-content">
+    <div class="container">
+      <section class="hero-card reveal">
+        <span class="hero-kicker">Education</span>
+        <h1>Academic and technical growth</h1>
+        <p class="section-lead">
+          My academic background in engineering and focused upskilling in data science shaped my approach to structured problem-solving.
+          I keep building practical capability through projects, certifications, and hands-on tooling.
+        </p>
+      </section>
 
-    <!-- Timeline -->
-    <div class="relative border-l-4 border-indigo-500 max-w-3xl mx-auto space-y-12">
+      <section class="section reveal">
+        <h2 class="section-title">Education Timeline</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Data Science Bootcamp</h3>
+            <p class="meta">Golden Gate University | Dec 2023 - Jun 2024</p>
+            <ul class="clean-list">
+              <li>Worked on machine learning, NLP, dashboarding, and SQL-driven analysis.</li>
+              <li>Built hands-on projects including churn analysis and sentiment modeling.</li>
+              <li>Used Python, Pandas, NumPy, scikit-learn, and MySQL in practical workflows.</li>
+            </ul>
+          </article>
 
-      <!-- Golden Gate University -->
-      <div class="ml-6 relative bg-white shadow-lg rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl" data-sr>
-        <div class="absolute w-5 h-5 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full -left-2.5 top-6"></div>
-        <h3 class="text-2xl font-bold text-indigo-600">Golden Gate University</h3>
-        <span class="text-gray-500 text-sm">Data Science Bootcamp | Dec 2023 – Jun 2024</span>
-        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1 leading-relaxed">
-          <li>Mastered <b>data analysis, ML, NLP, deep learning, SQL, BI tools</b></li>
-          <li>Worked on <b>real-world projects</b> – churn prediction, sentiment analysis, dashboards</li>
-          <li>Hands-on with <b>Python, Pandas, NumPy, Scikit-learn, TensorFlow, MySQL</b></li>
-        </ul>
-      </div>
-
-      <!-- AKTU -->
-      <div class="ml-6 relative bg-white shadow-lg rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl" data-sr>
-        <div class="absolute w-5 h-5 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full -left-2.5 top-6"></div>
-        <h3 class="text-2xl font-bold text-indigo-600">Dr. A.P.J. Abdul Kalam Technical University</h3>
-        <span class="text-gray-500 text-sm">B.Tech – ECE | Aug 2014 – Aug 2018</span>
-        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1 leading-relaxed">
-          <li>Strong foundation in <b>electronics, communication systems, and problem-solving</b></li>
-          <li>Final year project: <b>IoT-based home automation system</b></li>
-          <li>Actively participated in <b>technical fests & workshops</b></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Certificates Section -->
-    <div class="max-w-6xl mx-auto mt-24">
-      <h3 class="text-4xl font-extrabold text-center bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent mb-14">
-        🎓 Certifications & Achievements
-      </h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Certificate Card -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-500" data-sr>
-          <img src="images/Course_completion.jpg" alt="Data Science Bootcamp Certificate" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <h4 class="font-bold text-indigo-600 text-lg">Data Science Bootcamp</h4>
-            <p class="text-gray-600 text-sm">Golden Gate University | 2024</p>
-          </div>
+          <article class="timeline-item">
+            <h3>Bachelor of Technology, ECE</h3>
+            <p class="meta">Dr. A.P.J. Abdul Kalam Technical University | Aug 2014 - Aug 2018</p>
+            <ul class="clean-list">
+              <li>Developed a strong foundation in systems thinking, analysis, and problem-solving.</li>
+              <li>Completed a final-year IoT-based home automation project.</li>
+              <li>Participated in technical workshops and collaborative learning activities.</li>
+            </ul>
+          </article>
         </div>
+      </section>
 
-        <!-- Placeholder Certificate -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-500" data-sr>
-          <img src="images/Hackathon.jpg" alt="Hackathon Certificate" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <h4 class="font-bold text-indigo-600 text-lg">Hackathon Certificate</h4>
-            <p class="text-gray-600 text-sm">Upgrad | 2024</p>
-          </div>
+      <section class="section reveal">
+        <h2 class="section-title">Certifications and Highlights</h2>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <img src="images/Course_completion.jpg" alt="Data Science Bootcamp certificate" />
+            <div>
+              <h3>Data Science Bootcamp</h3>
+              <p class="meta">Golden Gate University | 2024</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <img src="images/Hackathon.jpg" alt="Hackathon participation certificate" />
+            <div>
+              <h3>Hackathon Achievement</h3>
+              <p class="meta">upGrad | 2024</p>
+            </div>
+          </article>
+
+          <article class="cert-card">
+            <img src="ss.png" alt="Project showcase snapshot" />
+            <div>
+              <h3>Dashboard and Analytics Practice</h3>
+              <p class="meta">Portfolio project evidence</p>
+            </div>
+          </article>
         </div>
-
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-500" data-sr>
-          <img src="images/certificates/tableau.jpg" alt="Tableau Certificate" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <h4 class="font-bold text-indigo-600 text-lg">Tableau Data Visualization</h4>
-            <p class="text-gray-600 text-sm">Udemy | 2024</p>
-          </div>
-        </div>
-
-      </div>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-indigo-600 via-blue-500 to-cyan-500 py-6 text-center text-white text-sm mt-24 shadow-inner">
-    © 2025 Ashwani Kumar. Crafted with 💡 passion & precision.
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        |
+        <a href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
+    </div>
   </footer>
 
-  <!-- ScrollReveal Script -->
-  <script>
-    ScrollReveal().reveal('[data-sr]', {
-      distance: '50px',
-      duration: 1200,
-      easing: 'ease-out',
-      origin: 'bottom',
-      interval: 200,
-      reset: false
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

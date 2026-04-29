@@ -1,123 +1,127 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ashwani Kumar - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    /* Animated Gradient Background */
-    body {
-      background: linear-gradient(270deg, #34d399, #3b82f6, #9333ea, #f59e0b);
-      background-size: 800% 800%;
-      animation: gradientMove 15s ease infinite;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Typing animation */
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid #fff;
-      animation: typing 4s steps(30, end), blink .75s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwani Kumar | Portfolio</title>
+  <meta name="description" content="Portfolio of Ashwani Kumar - data analytics, compliance operations, and automation projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="text-gray-900 font-sans">
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navbar -->
-  <nav class="bg-black bg-opacity-60 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-white">Ashwani Kumar</h1>
-      <div class="space-x-6">
-        <a href="index.html" class="text-yellow-300 font-bold">Home</a>
-        <a href="about.html" class="text-white hover:text-yellow-300">About Me</a>
-        <a href="exp.html" class="text-white hover:text-yellow-300">Experience</a>
-        <a href="edu.html" class="text-white hover:text-yellow-300">Education</a>
-        <a href="projects.html" class="text-white hover:text-yellow-300">Projects</a>
-        <a href="contact.html" class="text-white hover:text-yellow-300">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="exp.html">Experience</a>
+        <a class="nav-link" href="edu.html">Education</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center text-white px-6">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6 mt-20 typing">Hi, I'm Ashwani Kumar 👋</h1>
-    <p class="text-lg md:text-xl max-w-3xl mb-8" data-sr>
-      Data-Driven Professional | <span class="font-semibold">Operations & Compliance Specialist</span> | Transitioning into <span class="font-semibold">Data Analytics</span>.
-    </p>
-    <a href="projects.html" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition transform hover:scale-110 shadow-lg" data-sr>
-      🚀 Explore My Projects
-    </a>
+  <main id="main-content">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-card reveal">
+          <span class="hero-kicker">Data + Operations</span>
+          <h1>Building reliable systems from messy data</h1>
+          <p class="section-lead">
+            I am Ashwani Kumar, an operations and compliance professional transitioning deeper into data analytics.
+            I use SQL, Excel, Python, and dashboard tools to turn reporting into decisions and manual work into repeatable systems.
+          </p>
+          <ul class="pill-list">
+            <li class="pill">EPR Compliance</li>
+            <li class="pill">Data Analysis</li>
+            <li class="pill">Workflow Automation</li>
+            <li class="pill">Business Reporting</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="projects.html">Explore Projects</a>
+            <a class="btn-ghost" href="contact.html">Get In Touch</a>
+          </div>
+        </div>
 
-    <!-- Social Links -->
-    <div class="mt-10 flex space-x-6" data-sr>
-      <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" class="text-blue-400 hover:scale-125 transform transition text-3xl">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/12ashwani" target="_blank" class="text-gray-300 hover:scale-125 transform transition text-3xl">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="#" target="_blank" class="text-blue-300 hover:scale-125 transform transition text-3xl">
-        <i class="fab fa-twitter"></i>
-      </a>
+        <div class="photo-frame reveal">
+          <img src="images/ashwani.png" alt="Portrait of Ashwani Kumar" />
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2 class="section-title">What I Focus On</h2>
+        <p class="section-lead">My work sits at the intersection of operations discipline and practical analytics.</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Data Analytics</h3>
+            <p>Building clear analysis using Excel, SQL, Python, and visual dashboards for faster decision-making.</p>
+          </article>
+          <article class="card">
+            <h3>Compliance Operations</h3>
+            <p>Managing EPR and licensing workflows with structured documentation, process checks, and reporting accuracy.</p>
+          </article>
+          <article class="card">
+            <h3>Automation</h3>
+            <p>Reducing manual effort through smart templates, Google Sheets systems, and repeatable data pipelines.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2 class="section-title">Featured GitHub Project</h2>
+        <div class="card">
+          <h3>Intelligent CRM with Invoice Engine</h3>
+          <p>
+            A Python-based system that combines CRM workflows, invoice generation, and an AI assistant for natural-language
+            CRM queries. This is one of my strongest end-to-end business automation projects.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="https://github.com/12ashwani/Intelligent-CRM-with-Invoice-Engine" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="btn-ghost" href="pp/invoice.html">View Project Details</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2 class="section-title">Quick Links</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Professional Experience</h3>
+            <p>See the timeline of roles across compliance, operations, quality, and analytics execution.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="exp.html">View Experience</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Certifications and Learning</h3>
+            <p>Review my data science bootcamp, technical background, and ongoing upskilling journey.</p>
+            <div class="cta-row">
+              <a class="btn-ghost" href="edu.html">View Education</a>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <!-- About Preview -->
-  <section id="about" class="py-20 px-6 text-center text-gray-800 bg-white bg-opacity-90 rounded-t-3xl shadow-xl">
-    <h2 class="text-4xl font-bold mb-6 text-emerald-700" data-sr>About Me</h2>
-    <p class="text-lg max-w-3xl mx-auto mb-12" data-sr>
-      Hi, I’m <span class="font-semibold text-emerald-600">Ashwani Kumar</span> 👋 — bridging the gap between 
-      <span class="font-semibold">operations, compliance, and data analytics</span>.  
-      Passionate about building smarter workflows with SQL, Excel, Google Sheets & Python.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-emerald-50 shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2" data-sr>
-        <h3 class="text-xl font-bold text-emerald-600 mb-3">📊 Data Analytics</h3>
-        <p>Turning raw data into actionable insights using MySQL, Python & Excel dashboards.</p>
-      </div>
-      <div class="bg-emerald-50 shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2" data-sr>
-        <h3 class="text-xl font-bold text-emerald-600 mb-3">📝 Compliance</h3>
-        <p>Ensuring accuracy in licensing & regulatory submissions across EPR domains.</p>
-      </div>
-      <div class="bg-emerald-50 shadow-lg rounded-xl p-6 hover:shadow-2xl transition transform hover:-translate-y-2" data-sr>
-        <h3 class="text-xl font-bold text-emerald-600 mb-3">🚀 My Goal</h3>
-        <p>Moving deeper into <span class="font-semibold">Data Analytics</span> to support smarter decision-making.</p>
-      </div>
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        |
+        <a href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-black bg-opacity-70 py-6 text-center text-white text-sm">
-    © 2025 Ashwani Kumar. All rights reserved.
   </footer>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
-
-  <!-- ScrollReveal -->
-  <script>
-    ScrollReveal().reveal('[data-sr]', {
-      distance: '40px',
-      duration: 1000,
-      easing: 'ease-out',
-      origin: 'bottom',
-      interval: 200
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

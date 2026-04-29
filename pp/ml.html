@@ -1,181 +1,87 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(90deg, #ff8c00, #ff4500);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffff66;
-            transform: translateY(-3px);
-        }
-
-        section#projects {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #ff8c00;
-            border-bottom: 3px solid #ff8c00;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
-
-        p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        ul {
-            list-style-type: none;
-            margin-top: 20px;
-        }
-
-        ul li {
-            background-color: #fff;
-            margin: 15px 0;
-            padding: 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        ul li:hover {
-            background-color: #ff5733;
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(255, 87, 51, 0.3);
-            color: white;
-        }
-
-        ul li a {
-            color: #ff8c00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        ul li:hover a {
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(90deg, #ff4500, #ff8c00);
-            color: white;
-            margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        footer a {
-            color: #ffff66;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #ff4500;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9rem;
-            }
-
-            section#projects {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machine Learning Projects | Ashwani Kumar</title>
+  <meta name="description" content="Machine learning project portfolio by Ashwani Kumar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-    <header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../exp.html">Experience</a>
+        <a class="nav-link" href="../edu.html">Education</a>
+        <a class="nav-link active" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="hero-card reveal">
+        <span class="hero-kicker">Project Category</span>
         <h1>Machine Learning Projects</h1>
-        <nav>
-            <a href="../projects.html" aria-label="Navigate to Project Gallery">All Projects</a>
-            <a href="Excel.html" aria-label="Navigate to Excel Projects">Excel Projects</a>
-            <a href="tableau.html" aria-label="Navigate to Tableau Projects">Tableau Projects</a>
-            <a href="ml.html" aria-label="Navigate to Machine Learning Projects">Machine Learning Projects</a>
-            <a href="nlp.html" aria-label="Navigate to NLP Projects">NLP Projects</a>
-        </nav>
-    </header>
-
-    <section id="projects">
-        <h2>My Machine Learning Projects</h2>
-        <p>
-            Explore my collection of Machine Learning projects where I apply supervised and unsupervised learning techniques 
-            to solve real-world business problems. These projects involve data preprocessing, model training, and 
-            performance optimization using algorithms like Logistic Regression, Decision Trees, Random Forest, and more.
+        <p class="section-lead">
+          Predictive modeling work focused on practical business questions, including risk prediction,
+          fraud detection, and classification tasks.
         </p>
+        <div class="inline-links">
+          <a class="btn-ghost" href="Excel.html">Excel</a>
+          <a class="btn-ghost" href="tableau.html">Tableau</a>
+          <a class="btn-ghost" href="ml.html">Machine Learning</a>
+          <a class="btn-ghost" href="nlp.html">NLP</a>
+          <a class="btn-ghost" href="invoice.html">Invoice Automation</a>
+          <a class="btn-ghost" href="sheets-automation.html">Sheets Automation</a>
+        </div>
+      </section>
 
-        <ul>
-            <li><a href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank">1. Loan Repayment Assessment in Banking</a></li>
-            <li><a href="https://github.com/12ashwani/E-comerc-product_category" target="_blank">2. E-commerce Product Categorization</a></li>
-            <li><a href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank">3. Credit Card Fraud Detection</a></li>
-            <li><a href="https://github.com/12ashwani/student_ml" target="_blank">4. Student Performance Prediction</a></li>
+      <section class="section reveal">
+        <h2 class="section-title">Featured Work</h2>
+        <ul class="project-list">
+          <li class="project-item">
+            <h3>Loan Repayment Assessment in Banking</h3>
+            <p>Risk evaluation model for repayment probability using historical lending patterns.</p>
+            <a class="btn" href="https://github.com/12ashwani/Loan-Repayment-Assessment-in-Banking" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>E-commerce Product Categorization</h3>
+            <p>Classification workflow to auto-map product records to appropriate categories.</p>
+            <a class="btn" href="https://github.com/12ashwani/E-comerc-product_category" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>Credit Card Fraud Detection</h3>
+            <p>Detection model balancing precision and recall for high-risk anomaly identification.</p>
+            <a class="btn" href="https://github.com/12ashwani/Creditcard_fraud_detection" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
+          <li class="project-item">
+            <h3>Student Performance Prediction</h3>
+            <p>Performance forecasting model built on demographic and behavioral variables.</p>
+            <a class="btn" href="https://github.com/12ashwani/student_ml" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </li>
         </ul>
-    </section>
+      </section>
+    </div>
+  </main>
 
-    <footer>
-        <p>Contact me: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a> | 9058179268</p>
-        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" aria-label="View my LinkedIn profile">View on LinkedIn</a>
-    </footer>
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span><a href="../projects.html">Back to all project categories</a></span>
+    </div>
+  </footer>
+
+  <script src="../scripts.js"></script>
 </body>
 </html>

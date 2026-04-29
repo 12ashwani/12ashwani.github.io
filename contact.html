@@ -1,121 +1,96 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Ashwani Kumar</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Ashwani Kumar</title>
+  <meta name="description" content="Contact Ashwani Kumar for data analytics, operations, and compliance collaboration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-100 text-gray-900 font-sans">
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navbar -->
-  <nav class="bg-indigo-600 shadow-lg fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-white">Ashwani Kumar</h1>
-      <div class="space-x-6">
-        <a href="index.html" class="text-white hover:text-yellow-200">Home</a>
-        <a href="about.html" class="text-white hover:text-yellow-200">About</a>
-        <a href="exp.html" class="text-white hover:text-yellow-200">Experience</a>
-        <a href="edu.html" class="text-white hover:text-yellow-200">Education</a>
-        <a href="projects.html" class="text-white hover:text-yellow-200">Projects</a>
-        <a href="contact.html" class="text-yellow-200 font-bold">Contact</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Ashwani Kumar</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="exp.html">Experience</a>
+        <a class="nav-link" href="edu.html">Education</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Contact Section -->
-  <section id="contact" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-24">
-    <h2 class="text-4xl font-bold mb-4" data-sr>📩 Get in Touch</h2>
-    <p class="mb-12 max-w-xl text-lg text-center opacity-90" data-sr>
-      Let’s collaborate on exciting projects!  
-      Fill out the form below or connect with me directly.
-    </p>
+  <main id="main-content">
+    <div class="container">
+      <section class="hero-card reveal">
+        <span class="hero-kicker">Contact</span>
+        <h1>Let us connect</h1>
+        <p class="section-lead">
+          If you want to discuss analytics work, compliance operations, or collaboration opportunities,
+          send a message and I will respond as soon as possible.
+        </p>
+      </section>
 
-    <!-- Contact Form -->
-    <div class="max-w-2xl w-full mx-auto bg-white shadow-2xl rounded-2xl p-8" data-sr>
-      <form id="contact-form" class="space-y-6">
-        <div>
-          <label class="block text-left font-semibold text-gray-700">Your Name</label>
-          <input type="text" name="from_name" 
-            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-gray-800 transition transform hover:scale-[1.01]" 
-            required>
+      <section class="section reveal">
+        <div class="grid-2">
+          <article class="card">
+            <h2 class="section-title">Direct Contact</h2>
+            <p>Email: <a href="mailto:kumarashwani1208@gmail.com">kumarashwani1208@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919058179268">+91 90581 79268</a></p>
+            <div class="social-row">
+              <a class="btn-ghost" href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn-ghost" href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2 class="section-title">Send a Message</h2>
+            <form id="contact-form" data-email="kumarashwani1208@gmail.com">
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button class="btn" type="submit">Send Message</button>
+              <p id="form-status" class="status" aria-live="polite"></p>
+            </form>
+            <p class="notice">
+              The form always works via your default mail app. If EmailJS keys are configured in `window.PORTFOLIO_EMAILJS`,
+              it can send directly from the page.
+            </p>
+          </article>
         </div>
-        <div>
-          <label class="block text-left font-semibold text-gray-700">Your Email</label>
-          <input type="email" name="reply_to" 
-            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-gray-800 transition transform hover:scale-[1.01]" 
-            required>
-        </div>
-        <div>
-          <label class="block text-left font-semibold text-gray-700">Your Message</label>
-          <textarea name="message" rows="4" 
-            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-gray-800 transition transform hover:scale-[1.01]" 
-            required></textarea>
-        </div>
-        <button type="submit" 
-          class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg transform transition duration-300 hover:bg-indigo-700 hover:scale-105 shadow-md hover:shadow-xl">
-          🚀 Send Message
-        </button>
-      </form>
+      </section>
     </div>
+  </main>
 
-    <!-- Social Links -->
-    <div class="max-w-4xl mx-auto text-center mt-12 space-x-6" data-sr>
-      <a href="mailto:kumarashwani7037tridv@gmail.com" 
-         class="text-white hover:text-yellow-200 text-3xl inline-block transform transition duration-300 hover:scale-125">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" 
-         class="text-white hover:text-yellow-200 text-3xl inline-block transform transition duration-300 hover:scale-125">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/12ashwani" target="_blank" 
-         class="text-white hover:text-yellow-200 text-3xl inline-block transform transition duration-300 hover:scale-125">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://twitter.com/" target="_blank" 
-         class="text-white hover:text-yellow-200 text-3xl inline-block transform transition duration-300 hover:scale-125">
-        <i class="fab fa-twitter"></i>
-      </a>
+  <footer>
+    <div class="container footer-wrap">
+      <span>Copyright <span class="js-year"></span> Ashwani Kumar. All rights reserved.</span>
+      <span>
+        <a href="https://www.linkedin.com/in/ashwani-kumar-4aa519149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        |
+        <a href="https://github.com/12ashwani" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-indigo-600 py-6 text-center text-white text-sm">
-    © 2025 Ashwani Kumar. All rights reserved.
   </footer>
 
-  <!-- Font Awesome for Social Icons -->
-  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
-
-  <!-- EmailJS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
-    })();
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        .then(function() {
-          alert('✅ Message sent successfully!');
-        }, function(error) {
-          alert('❌ Failed to send message. Please try again.');
-          console.error(error);
-        });
-    });
-
-    // ScrollReveal animations
-    ScrollReveal().reveal('[data-sr]', {
-      distance: '40px',
-      duration: 1000,
-      easing: 'ease-out',
-      origin: 'bottom',
-      interval: 200
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
